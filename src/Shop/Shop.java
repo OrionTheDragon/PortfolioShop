@@ -424,9 +424,7 @@ public class Shop {
             out("Нажали кнопку возврата в getInterfaceCart");
             out("getShop(): " + getShop().toString());
             out("getCart(): " + getShop().getCart().toString());
-            // восстановим содержимое VBox как было
             root.getChildren().setAll(backupNodes);
-            // если нужно — заново обновим сумму/кнопки (например labelAllPrice), либо вызвать метод, который это делает:
             cartRef.interfaceCart(u);
         });
     }
