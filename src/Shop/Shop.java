@@ -7,6 +7,7 @@ import Data.Cabinet.PA;
 import Shop.Categories.Goods;
 
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -381,6 +382,8 @@ public class Shop {
     public void placingAnOrder(VBox root, List<Goods> arrGoods, double allPrice, User u) {
         out("Shop/Categories/Goods.java: Вошли в placingAnOrder");
 
+        List<Node> backupNodes = new ArrayList<>(root.getChildren());
+
         final Cart cartRef = getShop().getCart();
 
         out(u.getName());
@@ -421,7 +424,10 @@ public class Shop {
             out("Нажали кнопку возврата в getInterfaceCart");
             out("getShop(): " + getShop().toString());
             out("getCart(): " + getShop().getCart().toString());
-            cartRef.primaryFields(u);
+            // восстановим содержимое VBox как было
+            root.getChildren().setAll(backupNodes);
+            // если нужно — заново обновим сумму/кнопки (например labelAllPrice), либо вызвать метод, который это делает:
+            cartRef.interfaceCart(u);
         });
     }
 
