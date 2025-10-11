@@ -13,6 +13,12 @@ replay_pid*
 *.tar.gz
 *.rar
 
+
+echo autopush.bat >> .gitignore
+git add .gitignore
+git commit -m "Ignore autopush.bat"
+git push
+
 # ---------- IntelliJ IDEA ----------
 .idea/
 *.iml
