@@ -10,15 +10,16 @@ public class CannedGoods extends Goods {
 
     private ArrayList<CannedGoods> arrCannedGoods = new ArrayList<>();
 
-    public CannedGoods(String productName,
-                       String manufacturer,
-                       String country,
-                       Category categories,
-                       SubCategory subCategories,
-                       String type,
-                       double price,
-                       int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+    public CannedGoods(String SKU,
+                 String productName,
+                 String manufacturer,
+                 String country,
+                 Category categories,
+                 SubCategory subCategories,
+                 String type,
+                 double price,
+                 int quantity) {
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList<CannedGoods> getArrCannedGoods() {

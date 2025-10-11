@@ -10,15 +10,16 @@ public class NoAlcoholic extends Goods {
 
     private ArrayList<NoAlcoholic> arrNoAlcoholic = new ArrayList<>();
 
-    public NoAlcoholic(String productName,
-                       String manufacturer,
-                       String country,
-                       Category categories,
-                       SubCategory subCategories,
-                       String type,
-                       double price,
-                       int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+    public NoAlcoholic(String SKU,
+                 String productName,
+                 String manufacturer,
+                 String country,
+                 Category categories,
+                 SubCategory subCategories,
+                 String type,
+                 double price,
+                 int quantity) {
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList<NoAlcoholic> getArrNoAlcoholic() {

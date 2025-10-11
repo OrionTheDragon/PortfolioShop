@@ -10,7 +10,8 @@ public class Alcoholic extends Goods {
 
     private ArrayList<Alcoholic> arrAlcoholic = new ArrayList<>();
 
-    public Alcoholic(String productName,
+    public Alcoholic(String SKU,
+                     String productName,
                      String manufacturer,
                      String country,
                      Category categories,
@@ -18,7 +19,7 @@ public class Alcoholic extends Goods {
                      String type,
                      double price,
                      int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList<Alcoholic> getArrAlcoholic() {

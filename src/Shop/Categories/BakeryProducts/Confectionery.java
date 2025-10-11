@@ -10,7 +10,8 @@ public class Confectionery extends Goods {
 
     private ArrayList<Confectionery> arrConfectionery = new ArrayList<>();
 
-    public Confectionery(String productName,
+    public Confectionery(String SKU,
+                         String productName,
                          String manufacturer,
                          String country,
                          Category categories,
@@ -18,7 +19,7 @@ public class Confectionery extends Goods {
                          String type,
                          double price,
                          int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList<Confectionery> getArrConfectionery() {

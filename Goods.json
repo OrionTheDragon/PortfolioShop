@@ -1,1702 +1,1701 @@
-[
-  {
-    "productName": "Говяжья вырезка",
-    "manufacturer": "Мираторг",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 550.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Свинина (шейка)",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 320.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Куриное филе",
-    "manufacturer": "Птицефабрика Приозерная",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 250.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Баранина (ребро)",
-    "manufacturer": "Ферма 'Агро'",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 450.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Индейка (грудка)",
-    "manufacturer": "ИндиЛайт",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 300.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Фарш говяжий",
-    "manufacturer": "Мираторг",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 400.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Говядина на кости",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 480.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Свинина (окорок)",
-    "manufacturer": "Ферма 'Колос'",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 290.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Куриные бедра",
-    "manufacturer": "Птицефабрика Приозерная",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 180.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Утка целиком",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Meat",
-    "type": "Весовой",
-    "price": 370.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Колбаса 'Докторская'",
-    "manufacturer": "Останкино",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 350.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Сервелат любительский",
-    "manufacturer": "Дымов",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 420.0,
-    "quantity": 14
-  },
-  {
-    "productName": "Сосиски молочные",
-    "manufacturer": "Микоян",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 300.0,
-    "quantity": 19
-  },
-  {
-    "productName": "Ветчина класcическая",
-    "manufacturer": "Велком",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 270.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Салями итальянская",
-    "manufacturer": "Черкизово",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 500.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Колбаса варёная 'Любительская'",
-    "manufacturer": "Клинский",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 330.0,
-    "quantity": 15
-  },
-  {
-    "productName": "Бекон сырокопченый",
-    "manufacturer": "Мясной дом Бородина",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 450.0,
-    "quantity": 17
-  },
-  {
-    "productName": "Колбаски охотничьи",
-    "manufacturer": "Микоян",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 280.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Сосиски куриные",
-    "manufacturer": "Останкино",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 250.0,
-    "quantity": 16
-  },
-  {
-    "productName": "Колбаса копченая 'Московская'",
-    "manufacturer": "Дымов",
-    "country": "Россия",
-    "categories": "MEAT",
-    "subCategories": "Sausages",
-    "type": "Штучный",
-    "price": 520.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Молоко 'Простоквашино' 1л",
-    "manufacturer": "Простоквашино",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 70.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Кефир 'Домик в деревне' 1л",
-    "manufacturer": "Домик в деревне",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 75.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Сметана 20% 'Простоквашино' 400г",
-    "manufacturer": "Простоквашино",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 65.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Йогурт питьевой 'Активиа' 290мл",
-    "manufacturer": "Danone",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Творог 9% 300г",
-    "manufacturer": "Простоквашино",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 90.0,
-    "quantity": 15
-  },
-  {
-    "productName": "Сыр 'Российский' 200г",
-    "manufacturer": "Карат",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 130.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Масло сливочное 82.5% 180г",
-    "manufacturer": "Валио",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 150.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Ряженка 4% 500мл",
-    "manufacturer": "Простоквашино",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 60.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Йогурт греческий 3.5% 150г",
-    "manufacturer": "Чудо",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 40.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Сыр 'Пармезан' 150г",
-    "manufacturer": "Grana Padano",
-    "country": "Италия",
-    "categories": "MILK",
-    "subCategories": "DairyProducts",
-    "type": "Штучный",
-    "price": 300.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Яйца куриные С1, 10 шт",
-    "manufacturer": "Птицефабрика Ивановская",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 80.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Яйца куриные отборные С0, 10 шт",
-    "manufacturer": "Птицефабрика Зеленая",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 95.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Яйца деревенские, 10 шт",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 110.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Яйца перепелиные, 20 шт",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 130.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Яйца куриные С2, 30 шт",
-    "manufacturer": "Птицефабрика Ивановская",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 150.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Яйцо куриное С1, 1 шт",
-    "manufacturer": "Птицефабрика Ивановская",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 8.0,
-    "quantity": 16
-  },
-  {
-    "productName": "Яйца утиные, 6 шт",
-    "manufacturer": "Частная ферма",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 120.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Яйца гусиные, 4 шт",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 140.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Яйца индюшкины, 6 шт",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 160.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Яйца куриные органические, 10 шт",
-    "manufacturer": "ЭкоФерма",
-    "country": "Россия",
-    "categories": "MILK",
-    "subCategories": "Eggs",
-    "type": "Штучный",
-    "price": 130.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Картофель молодой",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 30.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Морковь",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 25.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Лук репчатый",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 20.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Помидоры розовые",
-    "manufacturer": "Тепличный комплекс",
-    "country": "Азербайджан",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 120.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Огурцы тепличные",
-    "manufacturer": "Тепличный комплекс",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 80.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Капуста белокочанная",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 15.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Перец болгарский красный",
-    "manufacturer": "Турецкая плантация",
-    "country": "Турция",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 150.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Чеснок",
-    "manufacturer": "Ферма",
-    "country": "Китай",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 200.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Капуста цветная",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 90.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Свекла",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Vegetables",
-    "type": "Весовой",
-    "price": 18.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Яблоки зелёные",
-    "manufacturer": "Садоводство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 90.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Бананы",
-    "manufacturer": "Dole",
-    "country": "Эквадор",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 60.0,
-    "quantity": 2
-  },
-  {
-    "productName": "Апельсины",
-    "manufacturer": "CitrusWorld",
-    "country": "Египет",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 70.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Мандарины",
-    "manufacturer": "Abkhazia Citrus",
-    "country": "Абхазия",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 80.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Лимоны",
-    "manufacturer": "Limoneira",
-    "country": "Турция",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 75.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Груши",
-    "manufacturer": "Садоводство",
-    "country": "Аргентина",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 85.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Виноград кишмиш",
-    "manufacturer": "Ферма",
-    "country": "Узбекистан",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 100.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Ананас",
-    "manufacturer": "Dole",
-    "country": "Коста-Рика",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 150.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Персики",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Узбекистан",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 120.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Киви",
-    "manufacturer": "Zespri",
-    "country": "Новая Зеландия",
-    "categories": "VEGETABLES",
-    "subCategories": "Fruits",
-    "type": "Весовой",
-    "price": 130.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Клубника",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 250.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Малина",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 300.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Черника",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Беларусь",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 400.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Смородина чёрная",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 350.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Смородина красная",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 280.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Голубика",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 450.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Ежевика",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 500.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Клюква",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 200.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Брусника",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 220.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Облепиха",
-    "manufacturer": "Фермерское хозяйство",
-    "country": "Россия",
-    "categories": "VEGETABLES",
-    "subCategories": "Berries",
-    "type": "Весовой",
-    "price": 180.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Батон нарезной",
-    "manufacturer": "Хлебозавод №5",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 40.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Хлеб ржаной",
-    "manufacturer": "Хлебозавод №7",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 35.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Хлеб 'Бородинский'",
-    "manufacturer": "Булочная 'Николаевская'",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 15
-  },
-  {
-    "productName": "Хлеб пшеничный",
-    "manufacturer": "Хлебозавод №5",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 30.0,
-    "quantity": 14
-  },
-  {
-    "productName": "Хлеб бездрожжевой",
-    "manufacturer": "Пекарня 'Добропек'",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 60.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Лаваш армянский",
-    "manufacturer": "Пекарня 'Арарат'",
-    "country": "Армения",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 45.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Багет французский",
-    "manufacturer": "Булочная 'Garçon'",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 55.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Булочки для гамбургеров, 6 шт",
-    "manufacturer": "Хлебокомбинат",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 80.0,
-    "quantity": 14
-  },
-  {
-    "productName": "Хлеб зерновой",
-    "manufacturer": "Хлебозавод №7",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Хлеб тостовый",
-    "manufacturer": "Хлебный Дом",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Bread",
-    "type": "Штучный",
-    "price": 65.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Печенье сахарное 'Юбилейное' 120г",
-    "manufacturer": "Mondelēz",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Круассан с шоколадом",
-    "manufacturer": "7 Days",
-    "country": "Болгария",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 40.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Пирожное 'Картошка' 100г",
-    "manufacturer": "Кондитерская 'Сластена'",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 60.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Торт 'Наполеон' 500г",
-    "manufacturer": "Кондитерская 'Прага'",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 300.0,
-    "quantity": 16
-  },
-  {
-    "productName": "Эклеры заварные 4 шт",
-    "manufacturer": "Кондитерская",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 120.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Пряники Тульские 300г",
-    "manufacturer": "Ясная Поляна",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 90.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Сушки ванильные 200г",
-    "manufacturer": "Хлебный Дом",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 45.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Кекс 'Столичный' 300г",
-    "manufacturer": "Коломенский",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 110.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Вафли 'Артек' 200г",
-    "manufacturer": "Коммунарка",
-    "country": "Беларусь",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 70.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Пастила яблочная 200г",
-    "manufacturer": "Шармэль",
-    "country": "Россия",
-    "categories": "BREAD",
-    "subCategories": "Confectionery",
-    "type": "Штучный",
-    "price": 130.0,
-    "quantity": 16
-  },
-  {
-    "productName": "Сахар-песок 1кг",
-    "manufacturer": "Русский сахар",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Сахар-рафинад 500г",
-    "manufacturer": "Чайкофский",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 45.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Соль поваренная 1кг",
-    "manufacturer": "Экстра",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 20.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Соль морская 500г",
-    "manufacturer": "Приправыч",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 30.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Перец чёрный молотый 50г",
-    "manufacturer": "Kamis",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 40.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Паприка молотая 50г",
-    "manufacturer": "Kotányi",
-    "country": "Австрия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 60.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Приправа для плова 30г",
-    "manufacturer": "Maggi",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 25.0,
-    "quantity": 19
-  },
-  {
-    "productName": "Лавровый лист 10г",
-    "manufacturer": "Kotányi",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 15.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Корица палочки 20г",
-    "manufacturer": "Kamis",
-    "country": "Индонезия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 55.0,
-    "quantity": 17
-  },
-  {
-    "productName": "Ванилин 5г",
-    "manufacturer": "Dr. Oetker",
-    "country": "Германия",
-    "categories": "GROCERY",
-    "subCategories": "Sugar_Salt_Spices",
-    "type": "Штучный",
-    "price": 20.0,
-    "quantity": 15
-  },
-  {
-    "productName": "Мука пшеничная 2кг",
-    "manufacturer": "Makfa",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 80.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Мука ржаная 1кг",
-    "manufacturer": "Пудовъ",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 60.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Гречневая крупа 900г",
-    "manufacturer": "Националь",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 90.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Рис длиннозёрный 1кг",
-    "manufacturer": "Мистраль",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 85.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Овсяные хлопья 400г",
-    "manufacturer": "Ясно Солнышко",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 40.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Манная крупа 800г",
-    "manufacturer": "Увелка",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Перловая крупа 800г",
-    "manufacturer": "Увелка",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 45.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Пшено шлифованное 800г",
-    "manufacturer": "Националь",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 55.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Кукурузная крупа 500г",
-    "manufacturer": "Мистраль",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Мюсли фруктовые 400г",
-    "manufacturer": "Nestle",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Cereals_Flour",
-    "type": "Штучный",
-    "price": 120.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Горошек зелёный консервированный 400г",
-    "manufacturer": "Bonduelle",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 80.0,
-    "quantity": 15
-  },
-  {
-    "productName": "Кукуруза сладкая консервированная 400г",
-    "manufacturer": "Bonduelle",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 75.0,
-    "quantity": 17
-  },
-  {
-    "productName": "Говядина тушёная 338г",
-    "manufacturer": "Главпродукт",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 160.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Сардины в масле 250г",
-    "manufacturer": "Доброфлот",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 100.0,
-    "quantity": 17
-  },
-  {
-    "productName": "Шпроты в масле 240г",
-    "manufacturer": "Рыбный остров",
-    "country": "Латвия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 120.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Фасоль красная консервированная 400г",
-    "manufacturer": "Heinz",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 90.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Огурцы маринованные 720мл",
-    "manufacturer": "Дядя Ваня",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 110.0,
-    "quantity": 16
-  },
-  {
-    "productName": "Томаты черри консервированные 720мл",
-    "manufacturer": "Дядя Ваня",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 120.0,
-    "quantity": 11
-  },
-  {
-    "productName": "Грибы маринованные 500мл",
-    "manufacturer": "Верес",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 130.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Варенье клубничное 450г",
-    "manufacturer": "Махеев",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "CannedGoods",
-    "type": "Штучный",
-    "price": 100.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Чай чёрный 'Lipton' 25 пак",
-    "manufacturer": "Lipton",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 60.0,
-    "quantity": 19
-  },
-  {
-    "productName": "Чай зелёный 'Greenfield' 100г",
-    "manufacturer": "Greenfield",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 120.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Кофе растворимый 'Nescafe Gold' 95г",
-    "manufacturer": "Nescafe",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 320.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Кофе молотый 'Lavazza' 250г",
-    "manufacturer": "Lavazza",
-    "country": "Италия",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 400.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Чай травяной 'Ромашка' 20 пак",
-    "manufacturer": "Краснодарский чай",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 17
-  },
-  {
-    "productName": "Кофе в зёрнах 'Paulig' 1кг",
-    "manufacturer": "Paulig",
-    "country": "Финляндия",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 1000.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Какао порошок 'Nesquik' 500г",
-    "manufacturer": "Nestle",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 150.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Цикорий растворимый 100г",
-    "manufacturer": "Галка",
-    "country": "Польша",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 80.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Чай чёрный 'Ахмад' 100г",
-    "manufacturer": "Ahmad Tea",
-    "country": "Шри-Ланка",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 110.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Кофе капсулы 'Nespresso' 10 шт",
-    "manufacturer": "Nespresso",
-    "country": "Швейцария",
-    "categories": "GROCERY",
-    "subCategories": "Tea_Coffee",
-    "type": "Штучный",
-    "price": 400.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Масло подсолнечное рафинированное 1л",
-    "manufacturer": "Олейна",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 110.0,
-    "quantity": 14
-  },
-  {
-    "productName": "Масло подсолнечное нерафинированное 1л",
-    "manufacturer": "Золотая семечка",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 100.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Масло оливковое Extra Virgin 0.5л",
-    "manufacturer": "Borges",
-    "country": "Испания",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 350.0,
-    "quantity": 10
-  },
-  {
-    "productName": "Масло оливковое Pomace 1л",
-    "manufacturer": "Maestro de Oliva",
-    "country": "Испания",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 300.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Масло льняное 250мл",
-    "manufacturer": "Kompass",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 220.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Масло кунжутное 250мл",
-    "manufacturer": "Thai Pure",
-    "country": "Таиланд",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 180.0,
-    "quantity": 2
-  },
-  {
-    "productName": "Масло кокосовое 200мл",
-    "manufacturer": "King Island",
-    "country": "Таиланд",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 250.0,
-    "quantity": 7
-  },
-  {
-    "productName": "Масло кукурузное 1л",
-    "manufacturer": "Коронации",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 150.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Масло горчичное 500мл",
-    "manufacturer": "Фермер",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 170.0,
-    "quantity": 16
-  },
-  {
-    "productName": "Масло грецкого ореха 250мл",
-    "manufacturer": "Alligel",
-    "country": "Россия",
-    "categories": "GROCERY",
-    "subCategories": "VegetableOils",
-    "type": "Штучный",
-    "price": 400.0,
-    "quantity": 20
-  },
-  {
-    "productName": "Вода питьевая негазированная 'Святой Источник' 1.5л",
-    "manufacturer": "Святой Источник",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 40.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Вода минеральная газир. 'Боржоми' 0.5л",
-    "manufacturer": "Borjomi",
-    "country": "Грузия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 80.0,
-    "quantity": 1
-  },
-  {
-    "productName": "Вода минеральная 'Ессентуки №4' 1.5л",
-    "manufacturer": "Ессентуки",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 15
-  },
-  {
-    "productName": "Вода питьевая детская 'ФрутоНяня' 0.33л",
-    "manufacturer": "ФрутоНяня",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 25.0,
-    "quantity": 4
-  },
-  {
-    "productName": "Вода минеральная 'Нарзан' 0.5л",
-    "manufacturer": "Нарзан",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 60.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Вода артезианская 'Архыз' 1.5л",
-    "manufacturer": "Архыз",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 45.0,
-    "quantity": 19
-  },
-  {
-    "productName": "Вода ключевая 'Шишкин лес' 5л",
-    "manufacturer": "Шишкин лес",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 70.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Вода газированная 'Bon Aqua' 1л",
-    "manufacturer": "Bon Aqua",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 55.0,
-    "quantity": 19
-  },
-  {
-    "productName": "Вода минеральная 'San Benedetto' 0.5л",
-    "manufacturer": "San Benedetto",
-    "country": "Италия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 90.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Вода питьевая 'Аква Минерале' 0.5л",
-    "manufacturer": "Аква Минерале",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Water",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 15
-  },
-  {
-    "productName": "Напиток газированный 'Coca-Cola' 1л",
-    "manufacturer": "Coca-Cola",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 70.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Напиток газированный 'Sprite' 1л",
-    "manufacturer": "Coca-Cola",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 65.0,
-    "quantity": 3
-  },
-  {
-    "productName": "Квас хлебный 'Никола' 1.5л",
-    "manufacturer": "Никола",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 80.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Сок яблочный 'Добрый' 1л",
-    "manufacturer": "Добрый",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 90.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Сок апельсиновый 'Rich' 1л",
-    "manufacturer": "Rich",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 100.0,
-    "quantity": 12
-  },
-  {
-    "productName": "Энергетический напиток 'Adrenaline Rush' 0.25л",
-    "manufacturer": "PepsiCo",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 110.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Чай холодный 'Lipton Ice Tea' персик 0.5л",
-    "manufacturer": "PepsiCo",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 16
-  },
-  {
-    "productName": "Морс клюквенный 'Добрый' 1л",
-    "manufacturer": "Добрый",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 95.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Лимонад 'Буратино' 0.5л",
-    "manufacturer": "Черноголовка",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 50.0,
-    "quantity": 19
-  },
-  {
-    "productName": "Напиток газированный 'Dr Pepper' 0.33л",
-    "manufacturer": "Dr Pepper",
-    "country": "США",
-    "categories": "DRINKS",
-    "subCategories": "NoAlcoholic",
-    "type": "Штучный",
-    "price": 120.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Пиво светлое 'Балтика №3' 1л",
-    "manufacturer": "Балтика",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 110.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Пиво тёмное 'Guinness' 0.44л",
-    "manufacturer": "Guinness",
-    "country": "Ирландия",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 150.0,
-    "quantity": 14
-  },
-  {
-    "productName": "Пиво светлое 'Heineken' 0.5л",
-    "manufacturer": "Heineken",
-    "country": "Нидерланды",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 130.0,
-    "quantity": 9
-  },
-  {
-    "productName": "Вино красное сухое Cabernet Sauvignon 0.75л",
-    "manufacturer": "Château Grand Vin",
-    "country": "Франция",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 600.0,
-    "quantity": 8
-  },
-  {
-    "productName": "Вино белое полусладкое 'Ркацители' 0.75л",
-    "manufacturer": "Teliani Valley",
-    "country": "Грузия",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 500.0,
-    "quantity": 13
-  },
-  {
-    "productName": "Шампанское 'Советское' брют 0.75л",
-    "manufacturer": "Советов",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 300.0,
-    "quantity": 14
-  },
-  {
-    "productName": "Водка 'Белуга' 0.5л",
-    "manufacturer": "Белуга",
-    "country": "Россия",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 750.0,
-    "quantity": 6
-  },
-  {
-    "productName": "Коньяк 'Hennessy VS' 0.5л",
-    "manufacturer": "Hennessy",
-    "country": "Франция",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 1500.0,
-    "quantity": 5
-  },
-  {
-    "productName": "Виски 'Jack Daniel's' 0.7л",
-    "manufacturer": "Jack Daniel's",
-    "country": "США",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 2000.0,
-    "quantity": 18
-  },
-  {
-    "productName": "Ликёр 'Baileys' 0.5л",
-    "manufacturer": "Baileys",
-    "country": "Ирландия",
-    "categories": "DRINKS",
-    "subCategories": "Alcoholic",
-    "type": "Штучный",
-    "price": 1300.0,
-    "quantity": 11
-  }
-]
+[ {
+  "SKU" : "00001",
+  "productName" : "Хлеб ржаной",
+  "manufacturer" : "Бородинский",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 75.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00002",
+  "productName" : "Хлеб Украинский",
+  "manufacturer" : "Озерский",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 80.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00003",
+  "productName" : "Батон нарезной",
+  "manufacturer" : "Кулинич",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 65.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00004",
+  "productName" : "Хлеб Дарницкий",
+  "manufacturer" : "Буланжери",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 70.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00005",
+  "productName" : "Багет парижский",
+  "manufacturer" : "Булочка",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 55.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00006",
+  "productName" : "Лаваш армянский",
+  "manufacturer" : "Хлебный Дом",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 45.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00007",
+  "productName" : "Хлеб белый",
+  "manufacturer" : "Каравай",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 55
+}, {
+  "SKU" : "00008",
+  "productName" : "Хлеб многозерновой",
+  "manufacturer" : "Каравай",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 45
+}, {
+  "SKU" : "00009",
+  "productName" : "Батон Лондонский",
+  "manufacturer" : "Кулинич",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 35
+}, {
+  "SKU" : "00010",
+  "productName" : "Лепешка с луком",
+  "manufacturer" : "Булочная",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Bread",
+  "type" : "Штучный",
+  "price" : 55.0,
+  "quantity" : 25
+}, {
+  "SKU" : "00011",
+  "productName" : "Пирожное Картошка",
+  "manufacturer" : "Булкин",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 30.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00012",
+  "productName" : "Эклер ванильный",
+  "manufacturer" : "Пекарня №1",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 45.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00013",
+  "productName" : "Пирог с яблоками",
+  "manufacturer" : "Пекарня №1",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 55.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00014",
+  "productName" : "Круассан шоколадный",
+  "manufacturer" : "Булкин",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 35.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00015",
+  "productName" : "Маффин классический",
+  "manufacturer" : "Булочная №1",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 40.0,
+  "quantity" : 25
+}, {
+  "SKU" : "00016",
+  "productName" : "Пирожное Шоколадное",
+  "manufacturer" : "Булочная №1",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 30.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00017",
+  "productName" : "Рулет бисквитный",
+  "manufacturer" : "Булкин",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00018",
+  "productName" : "Булочка с корицей",
+  "manufacturer" : "Булочная",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 20.0,
+  "quantity" : 80
+}, {
+  "SKU" : "00019",
+  "productName" : "Сдоба медовая",
+  "manufacturer" : "Булочная",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 25.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00020",
+  "productName" : "Пирог творожный",
+  "manufacturer" : "Булочная №1",
+  "country" : "Россия",
+  "categories" : "BREAD",
+  "subCategories" : "Confectionery",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 15
+}, {
+  "SKU" : "00021",
+  "productName" : "Сахар-песок",
+  "manufacturer" : "Русский Продукт",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 65.0,
+  "quantity" : 80
+}, {
+  "SKU" : "00022",
+  "productName" : "Соль пищевая йодированная",
+  "manufacturer" : "Меркурий",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 40.0,
+  "quantity" : 70
+}, {
+  "SKU" : "00023",
+  "productName" : "Перец черный молотый",
+  "manufacturer" : "Kotanyi",
+  "country" : "Швейцария",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00024",
+  "productName" : "Лавровый лист",
+  "manufacturer" : "Приправыч",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00025",
+  "productName" : "Приправа для шашлыка",
+  "manufacturer" : "Приправыч",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00026",
+  "productName" : "Мускатный орех молотый",
+  "manufacturer" : "Гринь",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 150.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00027",
+  "productName" : "Корица молотая",
+  "manufacturer" : "Гринь",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 130.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00028",
+  "productName" : "Гвоздика молотая",
+  "manufacturer" : "Приправыч",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 140.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00029",
+  "productName" : "Кориандр молотый",
+  "manufacturer" : "Приправыч",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 100.0,
+  "quantity" : 15
+}, {
+  "SKU" : "00030",
+  "productName" : "Хмели-сунели",
+  "manufacturer" : "Kotanyi",
+  "country" : "Швейцария",
+  "categories" : "GROCERY",
+  "subCategories" : "Sugar_Salt_Spices",
+  "type" : "Штучный",
+  "price" : 160.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00031",
+  "productName" : "Рис шлифованный",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00032",
+  "productName" : "Гречка ядрица",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 110.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00033",
+  "productName" : "Манная крупа",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 100.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00034",
+  "productName" : "Овсяные хлопья геркулес",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 95.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00035",
+  "productName" : "Пшено",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00036",
+  "productName" : "Горох колотый",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 80.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00037",
+  "productName" : "Кукурузная крупа",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 75.0,
+  "quantity" : 25
+}, {
+  "SKU" : "00038",
+  "productName" : "Мука пшеничная высший сорт",
+  "manufacturer" : "Пётр",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00039",
+  "productName" : "Мука ржаная",
+  "manufacturer" : "Пётр",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 65.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00040",
+  "productName" : "Перловая крупа",
+  "manufacturer" : "Увелка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Cereals_Flour",
+  "type" : "Штучный",
+  "price" : 85.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00041",
+  "productName" : "Горошек зеленый консервированный",
+  "manufacturer" : "Bonduelle",
+  "country" : "Франция",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 80.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00042",
+  "productName" : "Кукуруза консервированная",
+  "manufacturer" : "Bonduelle",
+  "country" : "Франция",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 85.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00043",
+  "productName" : "Говядина тушеная",
+  "manufacturer" : "Ермолино",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 150.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00044",
+  "productName" : "Тунец натуральный",
+  "manufacturer" : "Рижский рыбокомбинат",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00045",
+  "productName" : "Шпроты в масле",
+  "manufacturer" : "Балтийский берег",
+  "country" : "Латвия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 70.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00046",
+  "productName" : "Фасоль в томате",
+  "manufacturer" : "Главпродукт",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00047",
+  "productName" : "Томаты резаные",
+  "manufacturer" : "Домашний",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 70.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00048",
+  "productName" : "Шампиньоны консервированные",
+  "manufacturer" : "Лесная сказка",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00049",
+  "productName" : "Икра кабачковая",
+  "manufacturer" : "БалтФиш",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 55.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00050",
+  "productName" : "Паштет печеночный",
+  "manufacturer" : "Рублевский",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "CannedGoods",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 25
+}, {
+  "SKU" : "00051",
+  "productName" : "Чай Lipton Gold",
+  "manufacturer" : "Lipton",
+  "country" : "Великобритания",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00052",
+  "productName" : "Чай Princess Noori",
+  "manufacturer" : "Princess Noori",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00053",
+  "productName" : "Кофе Nescafe Classic",
+  "manufacturer" : "Nescafe",
+  "country" : "Франция",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 150.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00054",
+  "productName" : "Кофе Jacobs Monarch",
+  "manufacturer" : "Jacobs",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 160.0,
+  "quantity" : 25
+}, {
+  "SKU" : "00055",
+  "productName" : "Чай Akbar Classic",
+  "manufacturer" : "Akbar",
+  "country" : "Шри-Ланка",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 100.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00056",
+  "productName" : "Кофе Carte Noire зерно",
+  "manufacturer" : "Carte Noire",
+  "country" : "Франция",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 300.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00057",
+  "productName" : "Чай травяной Beko",
+  "manufacturer" : "Beko",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00058",
+  "productName" : "Кофе молотый Bushido",
+  "manufacturer" : "Bushido",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 85.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00059",
+  "productName" : "Чай черный Tess Black Tea",
+  "manufacturer" : "Tess",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 110.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00060",
+  "productName" : "Чай зеленый Curtis",
+  "manufacturer" : "Curtis",
+  "country" : "Нидерланды",
+  "categories" : "GROCERY",
+  "subCategories" : "Tea_Coffee",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00061",
+  "productName" : "Масло подсолнечное Олейна",
+  "manufacturer" : "Олейна",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00062",
+  "productName" : "Масло подсолнечное Злато",
+  "manufacturer" : "Злато",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 85.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00063",
+  "productName" : "Масло оливковое Borges",
+  "manufacturer" : "Borges",
+  "country" : "Испания",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 200.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00064",
+  "productName" : "Масло оливковое Carrefour",
+  "manufacturer" : "Carrefour",
+  "country" : "Испания",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 180.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00065",
+  "productName" : "Масло из виноградных косточек",
+  "manufacturer" : "Costa d'Oro",
+  "country" : "Италия",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 250.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00066",
+  "productName" : "Масло льняное Lea Vital",
+  "manufacturer" : "Lea Vital",
+  "country" : "Беларусь",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 150.0,
+  "quantity" : 15
+}, {
+  "SKU" : "00067",
+  "productName" : "Масло кунжутное Terra del Tuono",
+  "manufacturer" : "Terra del Tuono",
+  "country" : "Италия",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 300.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00068",
+  "productName" : "Масло арахисовое Жизнь",
+  "manufacturer" : "Жизнь",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00069",
+  "productName" : "Масло кокосовое Zdorovo",
+  "manufacturer" : "Zdorovo",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 170.0,
+  "quantity" : 15
+}, {
+  "SKU" : "00070",
+  "productName" : "Масло сливочное Крестьянское",
+  "manufacturer" : "Крестьянское",
+  "country" : "Россия",
+  "categories" : "GROCERY",
+  "subCategories" : "VegetableOils",
+  "type" : "Штучный",
+  "price" : 130.0,
+  "quantity" : 25
+}, {
+  "SKU" : "00071",
+  "productName" : "Вода Святой Источник 1.5л",
+  "manufacturer" : "Святой Источник",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 45.0,
+  "quantity" : 80
+}, {
+  "SKU" : "00072",
+  "productName" : "Вода Borjomi 0.5л",
+  "manufacturer" : "Borjomi",
+  "country" : "Грузия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 70.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00073",
+  "productName" : "Вода Нарзан 0.5л",
+  "manufacturer" : "Narzan",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00074",
+  "productName" : "Вода Essentuki 17 0.5л",
+  "manufacturer" : "Essentuki",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 55.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00075",
+  "productName" : "Вода Aqua Minerale 0.5л",
+  "manufacturer" : "Aqua Minerale",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 30.0,
+  "quantity" : 70
+}, {
+  "SKU" : "00076",
+  "productName" : "Вода Bonaqua 0.5л",
+  "manufacturer" : "Bonaqua",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 30.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00077",
+  "productName" : "Вода Архыз 0.5л",
+  "manufacturer" : "Архыз",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 35.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00078",
+  "productName" : "Вода Shishkin Les 0.5л",
+  "manufacturer" : "Shishkin Les",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 40.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00079",
+  "productName" : "Вода DILIGAN 0.5л",
+  "manufacturer" : "DILIGAN",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00080",
+  "productName" : "Вода Жемчужина Грузии 0.5л",
+  "manufacturer" : "Жемчужина Грузии",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Water",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00081",
+  "productName" : "Coca-Cola 0.5л",
+  "manufacturer" : "Coca-Cola",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 80
+}, {
+  "SKU" : "00082",
+  "productName" : "Fanta апельсин 0.5л",
+  "manufacturer" : "Coca-Cola",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 80
+}, {
+  "SKU" : "00083",
+  "productName" : "Sprite 0.5л",
+  "manufacturer" : "Coca-Cola",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 70
+}, {
+  "SKU" : "00084",
+  "productName" : "Лимонад Добрый 0.5л",
+  "manufacturer" : "Добрый",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00085",
+  "productName" : "Сок J7 апельсиновый 1л",
+  "manufacturer" : "J7",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 150.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00086",
+  "productName" : "Сок Кубанский яблочный 1л",
+  "manufacturer" : "Кубанский",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00087",
+  "productName" : "Квас Очаково 1л",
+  "manufacturer" : "Очаково",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 40.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00088",
+  "productName" : "Компот абрикосовый 1л",
+  "manufacturer" : "Главпродукт",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00089",
+  "productName" : "Морс клюквенный 1л",
+  "manufacturer" : "Лента",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00090",
+  "productName" : "Чай холодный Nestea 0.5л",
+  "manufacturer" : "Nestea",
+  "country" : "США",
+  "categories" : "DRINKS",
+  "subCategories" : "NoAlcoholic",
+  "type" : "Штучный",
+  "price" : 70.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00091",
+  "productName" : "Водка Столичная 0.5л",
+  "manufacturer" : "Столичная",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 200.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00092",
+  "productName" : "Водка Звезда 0.5л",
+  "manufacturer" : "Звезда",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 180.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00093",
+  "productName" : "Водка Хортиця 0.5л",
+  "manufacturer" : "Хортиця",
+  "country" : "Украина",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 170.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00094",
+  "productName" : "Коньяк Московский 0.5л",
+  "manufacturer" : "Московский",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 400.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00095",
+  "productName" : "Коньяк Арарат 0.5л",
+  "manufacturer" : "Ararat",
+  "country" : "Армения",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 450.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00096",
+  "productName" : "Вино красное Каберне 0.75л",
+  "manufacturer" : "Винзавод Урожай",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 250.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00097",
+  "productName" : "Вино белое Совиньон 0.75л",
+  "manufacturer" : "Винзавод Урожай",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 240.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00098",
+  "productName" : "Пиво Балтика 3 0.5л",
+  "manufacturer" : "Балтика",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 100
+}, {
+  "SKU" : "00099",
+  "productName" : "Пиво Жигулевское 0.5л",
+  "manufacturer" : "Балтика",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 55.0,
+  "quantity" : 80
+}, {
+  "SKU" : "00100",
+  "productName" : "Шампанское Советское 0.75л",
+  "manufacturer" : "Советское",
+  "country" : "Россия",
+  "categories" : "DRINKS",
+  "subCategories" : "Alcoholic",
+  "type" : "Штучный",
+  "price" : 300.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00101",
+  "productName" : "Говяжья вырезка",
+  "manufacturer" : "Мираторг",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.55,
+  "quantity" : 2561
+}, {
+  "SKU" : "00102",
+  "productName" : "Свиная корейка",
+  "manufacturer" : "Мираторг",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.3,
+  "quantity" : 5125
+}, {
+  "SKU" : "00103",
+  "productName" : "Куриная грудка",
+  "manufacturer" : "Петелинка",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.2,
+  "quantity" : 1367
+}, {
+  "SKU" : "00104",
+  "productName" : "Баранина лопатка",
+  "manufacturer" : "АгроКультура",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.45,
+  "quantity" : 8163
+}, {
+  "SKU" : "00105",
+  "productName" : "Говяжья грудинка",
+  "manufacturer" : "Мираторг",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.4,
+  "quantity" : 9026
+}, {
+  "SKU" : "00106",
+  "productName" : "Свинина отбивная",
+  "manufacturer" : "Мираторг",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.25,
+  "quantity" : 6493
+}, {
+  "SKU" : "00107",
+  "productName" : "Индейка филе",
+  "manufacturer" : "Индолина",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.35,
+  "quantity" : 9257
+}, {
+  "SKU" : "00108",
+  "productName" : "Говяжий стейк",
+  "manufacturer" : "Мираторг",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.6,
+  "quantity" : 8325
+}, {
+  "SKU" : "00109",
+  "productName" : "Утка потрошеная",
+  "manufacturer" : "Черкизово",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.3,
+  "quantity" : 9357
+}, {
+  "SKU" : "00110",
+  "productName" : "Фарш говяжий",
+  "manufacturer" : "Мираторг",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Meat",
+  "type" : "Весовой",
+  "price" : 0.5,
+  "quantity" : 2732
+}, {
+  "SKU" : "00111",
+  "productName" : "Колбаса Докторская",
+  "manufacturer" : "Микоян",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 250.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00112",
+  "productName" : "Колбаса Салями",
+  "manufacturer" : "Эколь",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 300.0,
+  "quantity" : 15
+}, {
+  "SKU" : "00113",
+  "productName" : "Сосиски молочные",
+  "manufacturer" : "Окраина",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 120.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00114",
+  "productName" : "Ветчина Пармская",
+  "manufacturer" : "Дым Дымыч",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 350.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00115",
+  "productName" : "Колбаса Краковская",
+  "manufacturer" : "Микоян",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 270.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00116",
+  "productName" : "Сосиски детские",
+  "manufacturer" : "Hochland",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 130.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00117",
+  "productName" : "Балык говяжий",
+  "manufacturer" : "Эколь",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 400.0,
+  "quantity" : 15
+}, {
+  "SKU" : "00118",
+  "productName" : "Колбаски говяжьи",
+  "manufacturer" : "Националь",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 180.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00119",
+  "productName" : "Краковская полукопченая",
+  "manufacturer" : "Черкизово",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 280.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00120",
+  "productName" : "Ливерная колбаса",
+  "manufacturer" : "Любимая кухня",
+  "country" : "Россия",
+  "categories" : "MEAT",
+  "subCategories" : "Sausages",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 25
+}, {
+  "SKU" : "00121",
+  "productName" : "Молоко Домик в деревне 3.2%",
+  "manufacturer" : "Вимм-Билль-Данн",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 80
+}, {
+  "SKU" : "00122",
+  "productName" : "Сметана Простоквашино 15%",
+  "manufacturer" : "Вимм-Билль-Данн",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 70.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00123",
+  "productName" : "Сыр Голландский President",
+  "manufacturer" : "President",
+  "country" : "Франция",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 450.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00124",
+  "productName" : "Масло Вологодское 82.5%",
+  "manufacturer" : "Вологодское",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 200.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00125",
+  "productName" : "Творог Нежный 5%",
+  "manufacturer" : "Вимм-Билль-Данн",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 80.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00126",
+  "productName" : "Йогурт питьевой Actimel",
+  "manufacturer" : "Danone",
+  "country" : "Франция",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 60.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00127",
+  "productName" : "Кефир Домик в деревне 2.5%",
+  "manufacturer" : "Вимм-Билль-Данн",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 50
+}, {
+  "SKU" : "00128",
+  "productName" : "Мороженое пломбир Инмарко",
+  "manufacturer" : "Инмарко",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 45.0,
+  "quantity" : 40
+}, {
+  "SKU" : "00129",
+  "productName" : "Молоко Утреннее 3.2%",
+  "manufacturer" : "Утреннее",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 55.0,
+  "quantity" : 60
+}, {
+  "SKU" : "00130",
+  "productName" : "Сыр плавленый Hochland",
+  "manufacturer" : "Hochland",
+  "country" : "Германия",
+  "categories" : "MILK",
+  "subCategories" : "DairyProducts",
+  "type" : "Штучный",
+  "price" : 150.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00131",
+  "productName" : "Яйца куриные Ряба С0 10 шт",
+  "manufacturer" : "Ряба",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 50.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00132",
+  "productName" : "Яйца куриные С1 10 шт",
+  "manufacturer" : "Окское",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 45.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00133",
+  "productName" : "Яйца куриные С0 10 шт",
+  "manufacturer" : "Село Зеленое",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 48.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00134",
+  "productName" : "Яйца гусиные 4 шт",
+  "manufacturer" : "Фермерское хозяйство",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 140.0,
+  "quantity" : 4
+}, {
+  "SKU" : "00135",
+  "productName" : "Яйца перепелиные 20 шт",
+  "manufacturer" : "Пореченские фермы",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 100.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00136",
+  "productName" : "Яйца куриные С1 20 шт",
+  "manufacturer" : "Ясенская ферма",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 90.0,
+  "quantity" : 20
+}, {
+  "SKU" : "00137",
+  "productName" : "Яйца куриные С0 15 шт",
+  "manufacturer" : "Окское",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 70.0,
+  "quantity" : 15
+}, {
+  "SKU" : "00138",
+  "productName" : "Яйца куриные С1 30 шт",
+  "manufacturer" : "Село Зеленое",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 130.0,
+  "quantity" : 30
+}, {
+  "SKU" : "00139",
+  "productName" : "Яйца куриные С0 5 шт",
+  "manufacturer" : "Ряба",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 25.0,
+  "quantity" : 5
+}, {
+  "SKU" : "00140",
+  "productName" : "Яйца куриные С1 10 шт",
+  "manufacturer" : "Окское",
+  "country" : "Россия",
+  "categories" : "MILK",
+  "subCategories" : "Eggs",
+  "type" : "Штучный",
+  "price" : 47.0,
+  "quantity" : 10
+}, {
+  "SKU" : "00141",
+  "productName" : "Клубника свежая",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.15,
+  "quantity" : 9231
+}, {
+  "SKU" : "00142",
+  "productName" : "Малина свежая",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.18,
+  "quantity" : 1256
+}, {
+  "SKU" : "00143",
+  "productName" : "Черная смородина",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.15,
+  "quantity" : 1672
+}, {
+  "SKU" : "00144",
+  "productName" : "Красная смородина",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.14,
+  "quantity" : 8437
+}, {
+  "SKU" : "00145",
+  "productName" : "Голубика свежая",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.2,
+  "quantity" : 7536
+}, {
+  "SKU" : "00146",
+  "productName" : "Черника свежая",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.25,
+  "quantity" : 2583
+}, {
+  "SKU" : "00147",
+  "productName" : "Клюква свежая",
+  "manufacturer" : "Север",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.17,
+  "quantity" : 3821
+}, {
+  "SKU" : "00148",
+  "productName" : "Крыжовник",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.14,
+  "quantity" : 9431
+}, {
+  "SKU" : "00149",
+  "productName" : "Ежевика свежая",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.16,
+  "quantity" : 4682
+}, {
+  "SKU" : "00150",
+  "productName" : "Шелковица",
+  "manufacturer" : "Ферма №1",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Berries",
+  "type" : "Весовой",
+  "price" : 0.15,
+  "quantity" : 6725
+}, {
+  "SKU" : "00151",
+  "productName" : "Яблоко красное",
+  "manufacturer" : "Яблочный сад",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.05,
+  "quantity" : 9326
+}, {
+  "SKU" : "00152",
+  "productName" : "Яблоко зеленое",
+  "manufacturer" : "Яблочный сад",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.05,
+  "quantity" : 7267
+}, {
+  "SKU" : "00153",
+  "productName" : "Банан",
+  "manufacturer" : "Санта",
+  "country" : "Эквадор",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.08,
+  "quantity" : 8327
+}, {
+  "SKU" : "00154",
+  "productName" : "Апельсин",
+  "manufacturer" : "Санта",
+  "country" : "Испания",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.06,
+  "quantity" : 3678
+}, {
+  "SKU" : "00155",
+  "productName" : "Мандарины",
+  "manufacturer" : "Санта",
+  "country" : "Марокко",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.07,
+  "quantity" : 9357
+}, {
+  "SKU" : "00156",
+  "productName" : "Груша",
+  "manufacturer" : "Сады Придонья",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.06,
+  "quantity" : 8378
+}, {
+  "SKU" : "00157",
+  "productName" : "Гранат",
+  "manufacturer" : "Гранат",
+  "country" : "Узбекистан",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.1,
+  "quantity" : 2672
+}, {
+  "SKU" : "00158",
+  "productName" : "Персик",
+  "manufacturer" : "Сады Придонья",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.07,
+  "quantity" : 6256
+}, {
+  "SKU" : "00159",
+  "productName" : "Авокадо",
+  "manufacturer" : "Авокадо",
+  "country" : "Мексика",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.15,
+  "quantity" : 7367
+}, {
+  "SKU" : "00160",
+  "productName" : "Киви",
+  "manufacturer" : "Зелёный остров",
+  "country" : "Новая Зеландия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Fruits",
+  "type" : "Весовой",
+  "price" : 0.1,
+  "quantity" : 2377
+}, {
+  "SKU" : "00161",
+  "productName" : "Помидор",
+  "manufacturer" : "Помидоры",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.15,
+  "quantity" : 7366
+}, {
+  "SKU" : "00162",
+  "productName" : "Огурец",
+  "manufacturer" : "Огурцы",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.12,
+  "quantity" : 88367
+}, {
+  "SKU" : "00163",
+  "productName" : "Картофель",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.04,
+  "quantity" : 6237
+}, {
+  "SKU" : "00164",
+  "productName" : "Морковь",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.05,
+  "quantity" : 3782
+}, {
+  "SKU" : "00165",
+  "productName" : "Лук репчатый",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.05,
+  "quantity" : 7316
+}, {
+  "SKU" : "00166",
+  "productName" : "Чеснок",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.1,
+  "quantity" : 3782
+}, {
+  "SKU" : "00167",
+  "productName" : "Капуста белокочанная",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.03,
+  "quantity" : 4672
+}, {
+  "SKU" : "00168",
+  "productName" : "Баклажан",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.06,
+  "quantity" : 6312
+}, {
+  "SKU" : "00169",
+  "productName" : "Перец болгарский",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.12,
+  "quantity" : 68321
+}, {
+  "SKU" : "00170",
+  "productName" : "Кабачок",
+  "manufacturer" : "Огород",
+  "country" : "Россия",
+  "categories" : "VEGETABLES",
+  "subCategories" : "Vegetables",
+  "type" : "Весовой",
+  "price" : 0.05,
+  "quantity" : 3651
+} ]

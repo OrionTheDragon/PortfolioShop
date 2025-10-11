@@ -223,7 +223,9 @@ public class DeveloperMod {
             cardComboBox.setDisable(!hasAny);
             getChangeVirtualCashText().setDisable(!hasAny);
             getSetVirtualCash().setDisable(!hasAny);
-            if (!hasAny) errMess(getCheatRoot(), "У пользователя нет карт");
+            if (!hasAny) {
+                errMess(getCheatRoot(), "У пользователя нет карт");
+            }
         }
         catch (Exception e) {
             out("Developer/DeveloperMod.java: Ошибка в cheats(List<Card>, User): " + e.getMessage());

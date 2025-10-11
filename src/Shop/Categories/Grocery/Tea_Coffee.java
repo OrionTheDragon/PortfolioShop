@@ -10,15 +10,16 @@ public class Tea_Coffee extends Goods {
 
     private ArrayList<Tea_Coffee> arrTea_Coffee = new ArrayList<>();
 
-    public Tea_Coffee(String productName,
-                      String manufacturer,
-                      String country,
-                      Category categories,
-                      SubCategory subCategories,
-                      String type,
-                      double price,
-                      int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+    public Tea_Coffee(String SKU,
+                 String productName,
+                 String manufacturer,
+                 String country,
+                 Category categories,
+                 SubCategory subCategories,
+                 String type,
+                 double price,
+                 int quantity) {
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList<Tea_Coffee> getArrTea_Coffee() {

@@ -10,7 +10,8 @@ public class Water extends Goods {
 
     private ArrayList arrWater = new ArrayList<>();
 
-    public Water(String productName,
+    public Water(String SKU,
+                 String productName,
                  String manufacturer,
                  String country,
                  Category categories,
@@ -18,7 +19,7 @@ public class Water extends Goods {
                  String type,
                  double price,
                  int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList getArrWater() {

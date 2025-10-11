@@ -10,15 +10,16 @@ public class Meat extends Goods {
 
     private ArrayList<Meat> arrMeat = new ArrayList<>();
 
-    public Meat(String productName,
-                String manufacturer,
-                String country,
-                Category categories,
-                SubCategory subCategories,
-                String type,
-                double price,
-                int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+    public Meat(String SKU,
+                 String productName,
+                 String manufacturer,
+                 String country,
+                 Category categories,
+                 SubCategory subCategories,
+                 String type,
+                 double price,
+                 int quantity) {
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList<Meat> getArrMeat() {

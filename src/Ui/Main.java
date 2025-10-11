@@ -1,6 +1,5 @@
 package Ui;
 
-import Shop.Categories.Goods;
 import Shop.Shop;
 import Data.User;
 import javafx.application.Application;
@@ -19,6 +18,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static Util.Util.*;
 import static Shop.Shop.tabPane;
@@ -36,6 +36,8 @@ public class Main extends Application {
 
     /** Название/путь файла с сохранением пользователей. */
     public static final String PATH = "User.json";
+
+    private static Shop shop;
 
     // Боксы
     /** Корневой контейнер текущего экрана (вертикальная колонка с отступом 10). */
@@ -94,7 +96,7 @@ public class Main extends Application {
     private File saveFile = new File(PATH);
 
     /** Кэш пользователей, считанный из {@link #PATH}. */
-    private static List<User> list = safeReadList(PATH, User.class);
+    private static List<User> userList = safeReadList(PATH, User.class);
 
     /** Глобальная ссылка на текущий экземпляр приложения для удобного доступа из других классов. */
     public static Main INSTANCE;
@@ -221,11 +223,17 @@ public class Main extends Application {
     public File getSaveFile() {
         return saveFile;
     }
-    public static List<User> getList() {
-        return list;
+    public static List<User> getUserList() {
+        return userList;
     }
-    public static void setList(List<User> list) {
-        Main.list = list;
+    public static void setUserList(List<User> userList) {
+        Main.userList = userList;
+    }
+    public static Shop getShop() {
+        return shop;
+    }
+    public static void setShop(Shop shop) {
+        Main.shop = shop;
     }
     // <------- Конец блока
 
@@ -348,7 +356,7 @@ public class Main extends Application {
                 clearRoot(getRoot());
                 out("Ui/Main.java: Файл сохранения найден: " + getSaveFile());
 
-                List<User> users = getList();
+                List<User> users = getUserList();
                 if (users == null || users.isEmpty()) {
                     errMess(getRoot(), "Нет ни одного пользователя в сохранении");
                     return;
@@ -384,7 +392,7 @@ public class Main extends Application {
                         }
 
                         User found = null;
-                        for (User u : getList()) {
+                        for (User u : getUserList()) {
                             if (name.equals(u.getName())) {
                                 found = u;
                                 break;
@@ -402,7 +410,8 @@ public class Main extends Application {
                         }
 
                         getRoot().getChildren().clear();
-                        new Shop().shop(getRoot(), found);
+                        setShop(new Shop());
+                        getShop().shop(getRoot(), found);
                     }
                     catch (Exception e) {
                         out("Ui/Main.java: Ошибка при входе: " + e);
@@ -443,6 +452,17 @@ public class Main extends Application {
      */
     public void addsAccount() {
         try {
+            AtomicInteger indexUser = new AtomicInteger();
+            for (User u : getUserList()) {
+                if (u != null) {
+                    out("Ui/Main.java: Перебираем ID пользователей: " + u.getUserID());
+                    indexUser.incrementAndGet();
+                }
+                else {
+                    out("Ui/Main.java: Пользователей нет");
+                }
+            }
+
             out("Ui/Main.java: Создаем окно регистрации...");
             clearRoot(getRoot());
             initializationAge(getComboBoxAge());
@@ -478,7 +498,7 @@ public class Main extends Application {
                     out("Ui/Main.java: Начался процесс сохранения");
                     String nameText = getTextName().getText().trim();
 
-                    for (User u : getList()) {
+                    for (User u : getUserList()) {
                         if (u.getName().equals(nameText)) {
                             errMess(getRoot(), "Пользователь с таким именем уже существует");
                             return;
@@ -542,13 +562,15 @@ public class Main extends Application {
                     setAge(ageValue);
                     setCash(cashValue);
 
-                    setUser(new User(0, getName(), getPassword(), getAge(), getCash()));
+                    out("ID нового пользователя: №" + indexUser.get());
+
+                    setUser(new User(indexUser.get(), getName(), getPassword(), getAge(), getCash()));
 
                     out("Ui/Main.java: Вызвали appendUser");
                     append(Path.of(PATH), getUser());
 
                     try {
-                        setList(safeReadList(PATH, User.class));
+                        setUserList(safeReadList(PATH, User.class));
                     }
                     catch (Exception re) {
                         out("Ui/Main.java: Не удалось перечитать список пользователей: " + re.getMessage());
@@ -556,7 +578,8 @@ public class Main extends Application {
 
                     out("Ui/Main.java: Закончили процесс сохранения: " + getUser().toString());
                     clearRoot(getRoot());
-                    new Shop().shop(getRoot(), getUser());
+                    setShop(new Shop());
+                    getShop().shop(getRoot(), getUser());
                 }
                 catch (Exception ex) {
                     out("Ui/Main.java: Ошибка при сохранении пользователя: " + ex.getMessage());

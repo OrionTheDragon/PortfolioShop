@@ -10,15 +10,16 @@ public class Cereals_Flour extends Goods {
 
     private ArrayList<Cereals_Flour> arrCereals_Flour = new ArrayList<>();
 
-    public Cereals_Flour(String productName,
-                         String manufacturer,
-                         String country,
-                         Category categories,
-                         SubCategory subCategories,
-                         String type,
-                         double price,
-                         int quantity) {
-        super(productName, manufacturer, country, categories, subCategories, type, price, quantity);
+    public Cereals_Flour(String SKU,
+                 String productName,
+                 String manufacturer,
+                 String country,
+                 Category categories,
+                 SubCategory subCategories,
+                 String type,
+                 double price,
+                 int quantity) {
+        super(SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity);
     }
 
     public ArrayList<Cereals_Flour> getArrCereals_Flour() {

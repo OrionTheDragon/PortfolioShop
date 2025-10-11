@@ -1,18 +1,23 @@
 package Shop;
 
+import Data.Card;
+import Data.Cart;
 import Data.User;
 import Data.Cabinet.PA;
 import Shop.Categories.Goods;
+
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static Ui.Main.*;
 import static Util.Util.*;
@@ -62,7 +67,9 @@ public class Shop {
     // Категории
     private Category[] cats = Category.values();
 
-    private Goods goods = new Goods(this);
+    private Goods goods = new Goods();
+
+    private Cart cart = new Cart();
 
     public PA getPa() {
         return pa;
@@ -184,6 +191,12 @@ public class Shop {
     public void setGoods(Goods goods) {
         this.goods = goods;
     }
+    public Cart getCart() {
+        return cart;
+    }
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
 
     public Shop() {
         // грузим картинки
@@ -244,8 +257,8 @@ public class Shop {
             }
 
             b.setGraphic(new ImageView(arrImage[i]));
-            Category cat = getCats()[i];
-            b.setOnAction(e -> getGoods().selectedCategories(getRootShop(), cat, user));
+            final Category c = getCats()[i];
+            b.setOnAction(e -> getGoods().selectedCategories(getRootShop(), c, user));
         }
     }
 
@@ -335,7 +348,7 @@ public class Shop {
 
             // ищем по indexValid/userID
             User fromStore = null;
-            for (User u : getList()) {
+            for (User u : getUserList()) {
                 if (u.getUserID() == user.getUserID()) {
                     fromStore = u;
                     break;
@@ -347,7 +360,7 @@ public class Shop {
                 fromStore = user;
             }
 
-            for (User u : getList()) {
+            for (User u : getUserList()) {
                 if (u.getUserID() == user.getUserID()) {
                     setPa(new PA(u));
                     u.setPa(getPa());
@@ -363,5 +376,79 @@ public class Shop {
             out("Shop/Shop.java: Ошибка в createPA: " + e.getMessage());
             throw e; // сохраняем исходное поведение
         }
+    }
+
+    public void placingAnOrder(VBox root, List<Goods> arrGoods, double allPrice, User u) {
+        out("Shop/Categories/Goods.java: Вошли в placingAnOrder");
+
+        final Cart cartRef = getShop().getCart();
+
+        out(u.getName());
+
+        clearRoot(root);
+
+        ArrayList<Card> cards = u.getCard();
+
+        RadioButton[] radioButtons = {new RadioButton("Оплатить наличными"), new RadioButton("Оплатить картой")};
+
+        ArrayList<Label> cardAllBalance = u.getPa().getCardBalance();
+        Label cashBalance = new Label("Наличные средства: " + u.getCash());
+
+        Button design = new Button("Заказать");
+        Button cancel = new Button("Отменить");
+
+        HBox DCHbox = new HBox(8);
+        DCHbox.getChildren().addAll(design, cancel);
+        DCHbox.setAlignment(Pos.TOP_CENTER);
+
+        Label placingAnOrderLabel = new Label("Оформление заказа");
+        Label separator = makeLabel("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        editLabelPA(placingAnOrderLabel);
+
+        root.getChildren().addAll(placingAnOrderLabel, separator);
+
+        for (Goods arrGood : arrGoods) {
+            root.getChildren().add(makeLabel("Наименование позиции: " + arrGood.getProductName()));
+        }
+
+        root.getChildren().addAll(makeLabel("Всего к оплате: " + allPrice + "₽"), DCHbox);
+
+        for (RadioButton rb : radioButtons) {
+            root.getChildren().add(rb);
+        }
+
+        cancel.setOnAction(_ -> {
+            out("Нажали кнопку возврата в getInterfaceCart");
+            out("getShop(): " + getShop().toString());
+            out("getCart(): " + getShop().getCart().toString());
+            cartRef.primaryFields(u);
+        });
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "imageMeat=" + imageMeat +
+                ", imageMilk=" + imageMilk +
+                ", imageVegetables=" + imageVegetables +
+                ", imageBread=" + imageBread +
+                ", imageGrocery=" + imageGrocery +
+                ", imageDrinks=" + imageDrinks +
+                ", pa=" + pa +
+                ", shopTab=" + shopTab +
+                ", lineOne=" + lineOne +
+                ", lineTwo=" + lineTwo +
+                ", rootShop=" + rootShop +
+                ", ui=" + ui +
+                ", meatButton=" + meatButton +
+                ", milkButton=" + milkButton +
+                ", vegetablesButton=" + vegetablesButton +
+                ", breadButton=" + breadButton +
+                ", groceryButton=" + groceryButton +
+                ", drinksButton=" + drinksButton +
+                ", cats=" + Arrays.toString(cats) +
+                ", goods=" + goods +
+                ", cart=" + cart +
+                '}';
     }
 }

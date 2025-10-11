@@ -1,9 +1,6 @@
 package Util;
 
-import Data.Card;
-import Data.User;
 import Shop.Shop;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
@@ -23,7 +20,7 @@ import javafx.scene.text.FontWeight;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.AtomicMoveNotSupportedException;
+import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -406,7 +403,7 @@ public class Util {
 
     /**
      * Никогда не вернёт null: либо список из файла, либо пустой список.
-     * Она нужна, несмотря на то, что есть функция Util/Util.java.readList()
+     * Работает в паре с Util/Util.java.readList()
      *
      * @param path путь к JSON
      * @param cls  класс элементов
@@ -415,13 +412,29 @@ public class Util {
      */
     public static <T> List<T> safeReadList(String path, Class<T> cls) {
         try {
+            ObjectMapper m = new ObjectMapper().findAndRegisterModules();
+            // 1. Если это URL — читаем напрямую из сети
+            if (path.startsWith("http://") || path.startsWith("https://")) {
+                out("Util/Util.java/safeReadList: Загружаем данные из URL → " + path);
+                return m.readValue(
+                        new URL(path),
+                        m.getTypeFactory().constructCollectionType(List.class, cls)
+                );
+            }
+
+            // 2. Если это локальный файл
             File f = new File(path);
-            if (!f.exists() || f.length() == 0) return Collections.emptyList();
+            if (!f.exists() || f.length() == 0) {
+                out("Util/Util.java/safeReadList: Файл отсутствует или пуст → " + f.getAbsolutePath());
+                return Collections.emptyList();
+            }
+
+            out("Util/Util.java/safeReadList: Загружаем данные из локального файла → " + f.getAbsolutePath());
             List<T> list = readList(path, cls);
             return (list != null) ? list : Collections.emptyList();
         }
         catch (Exception e) {
-            out("Util/Util.java: Ошибка в safeReadList: " + e.getMessage());
+            out("Util/Util.java/safeReadList: Ошибка в safeReadList: " + e.getMessage());
             return Collections.emptyList();
         }
     }
@@ -461,7 +474,8 @@ public class Util {
                 JsonNode root = mapper.readTree(f);
                 if (root.isArray()) {
                     all = mapper.readValue(f, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
-                } else if (root.isObject()) {
+                }
+                else if (root.isObject()) {
                     all.add(mapper.treeToValue(root, clazz));
                 }
             }

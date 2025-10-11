@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static Data.Cart.PATH_CART;
 import static Util.Util.*;
 import static Data.Card.*;
 
@@ -34,6 +35,21 @@ public class User {
     /** Личный кабинет пользователя */
     @JsonIgnore
     private PA pa;
+
+    @JsonIgnore
+    private Cart itemsInCart;
+
+//    {
+//        if (getItemsInCart().file.isFile()) {
+//            setItemsInCart(safeReadList(PATH_CART, Cart.class));
+//        }
+//        else if (!itemsInCart.file.isFile()) {
+//            setItemsInCart(new ArrayList<>());
+//        }
+//        else {
+//            out("Непредвиденная ошибка");
+//        }
+//    }
 
     /** Список карт пользователя */
     @JsonIgnore
@@ -120,6 +136,12 @@ public class User {
         this.userID = userID;
         out("Data/User.java: Индекс установлен: " + userID);
     }
+    public Cart getItemsInCart() {
+        return itemsInCart;
+    }
+    public void setItemsInCart(Cart itemsInCart) {
+        this.itemsInCart = itemsInCart;
+    }
 
     /**
      * Загружает из файла все карты и привязывает к текущему пользователю только его карты.
@@ -143,11 +165,37 @@ public class User {
             Optional.ofNullable(u.getPa()).ifPresent(pa -> pa.setCard(mine));
 
             out("Data/User.java: Загружено карт пользователя " + u.getName() + ": " + mine.size());
+            loadCart(u);
             return mine.size();
         }
         catch (Exception e) {
             out("Data/User.java: Ошибка при загрузке карт: " + e.getMessage());
             return 0;
+        }
+    }
+
+    public void loadCart(User u) {
+        List<Cart> allCart = safeReadList(PATH_CART, Cart.class);
+
+        Cart m = null;
+
+        for (Cart c : allCart) {
+            if (u.getUserID() == c.getUserID() && c != null) {
+                m = c;
+                break;
+            }
+        }
+
+        if (m != null) {
+            out("Data/User.java: найдена корзина userID=" + u.getUserID() +
+                    ", товаров=" + (m.getGoodsList() == null ? 0 : m.getGoodsList().size()));
+            setItemsInCart(m);
+        }
+        else {
+            out("Data/User.java: корзина не найдена, создаём пустую для userID=" + u.getUserID());
+            Cart c = new Cart(u.getUserID());
+            setItemsInCart(c);
+//            c.loadCart();
         }
     }
 }

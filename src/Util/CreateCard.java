@@ -16,7 +16,6 @@ import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 
 import java.nio.file.Path;
-import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -44,6 +43,8 @@ public class CreateCard {
     public static void createCard(VBox root, Tab tab, User user) {
         try {
             out("Util/CreateCard.java: Началось создание бокса привязывания банковской карты");
+
+            out("Util/CreateCard.java: ID user: " + user.getUserID());
 
             // Боксы
             /** Контейнер для ввода номера карты (16 односимвольных полей с разделителями). */
@@ -165,6 +166,7 @@ public class CreateCard {
                     }
 
                     char[] numbersCard = getCharArrayFromTextFields(textAreasNumber);
+
                     int userID = user.getUserID();
                     char[] valid = getCharArrayFromTextFields(textValidUtil);
 

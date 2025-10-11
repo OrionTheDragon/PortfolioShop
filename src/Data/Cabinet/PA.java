@@ -4,6 +4,7 @@ import Developer.*;
 import Data.Card;
 import Data.User;
 import Shop.Shop;
+
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
@@ -16,6 +17,7 @@ import javafx.util.Duration;
 import javafx.scene.Parent;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static Shop.Shop.tabPane;
 import static Ui.Main.*;
@@ -60,6 +62,7 @@ public class PA { // ЛК
     private Button settings = new Button("Настройки");
     /** Кнопка выхода из аккаунта (возврат в общее главное меню приложения). */
     private Button exit = new Button("Выйти из аккаунта");
+    private Button openCart = new Button("Корзина");
 
     // Этикетки
     /** Метка для отображения имени пользователя в заголовке ЛК. */
@@ -89,7 +92,7 @@ public class PA { // ЛК
         try {
             setUser(user);
 
-            for (User u : getList()) {
+            for (User u : getUserList()) {
                 if (u.getUserID() == getUser().getUserID()) {
                     setName(new Label(getUser().getName()));
                     setAge(new Label(Byte.toString(getUser().getAge())));
@@ -207,6 +210,12 @@ public class PA { // ЛК
     public void setCardVBox(VBox cardVBox) {
         this.cardVBox = cardVBox;
     }
+    public Button getOpenCart() {
+        return openCart;
+    }
+    public void setOpenCart(Button openCart) {
+        this.openCart = openCart;
+    }
 
     /**
      * Инициализирует заголовочные поля ЛК и перестраивает блок с картами.
@@ -232,7 +241,6 @@ public class PA { // ЛК
 
     /**
      * Строит главное меню ЛК, навешивает обработчики, подключает вкладку в {@link Shop#getShopTab() getShopTab}.
-     * Без изменения логики.
      */
     public void mainMenu() {
         try {
@@ -248,6 +256,7 @@ public class PA { // ЛК
                     getAge(),
                     getCashBalance(),
                     getCardVBox(),
+                    getOpenCart(),
                     getPurchaseHistory(),
                     getSettings(),
                     getExit(),
@@ -256,6 +265,10 @@ public class PA { // ЛК
             if (!isFlowIsItWorking() ) {
                 balanceMoneyAll();
             }
+
+            getOpenCart().setOnAction(_ -> {
+                getUser().getItemsInCart().getInterfaceCart(getUser());
+            });
 
             getSettings().setOnAction(_ -> {
                 try {
@@ -348,31 +361,65 @@ public class PA { // ЛК
     /**
      * Перестраивает блок с балансами карт, сортируя карты по {@code indexValid} и выводя
      * только карты текущего пользователя.
-     * Без изменения логики.
      */
     public void rebuildCardsBox() {
         try {
-            getCard().sort(java.util.Comparator.comparingInt(Card::getIndexValid));
+            if (!javafx.application.Platform.isFxApplicationThread()) {
+                javafx.application.Platform.runLater(this::rebuildCardsBox);
+                return;
+            }
+
+            List<Card> cards = getCard();
             getCardVBox().getChildren().clear();
+
             if (getCard() == null || getCard().isEmpty()) {
                 out("Data/Cabinet/PA.java: Карт нет");
                 return;
             }
 
-            getCardBalance().clear();
-            int j = 0;
-            for (Card c : getCard()) {
-                if (c.getUserID() == getUser().getUserID()) {
-                    Label lb = new Label("Баланс на карте №" + (j + 1) + ": " + c.getVirtualCash());
-                    editLabelPA(lb);
-                    getCardBalance().add(lb);
-                    j++;
-                }
+            int uid = getUser().getUserID();
+
+            try {
+                cards.sort((a, b) -> {
+                    // если indexValid окажется null
+                    int ia = (a == null) ? 0 : a.getIndexValid();
+                    int ib = (b == null) ? 0 : b.getIndexValid();
+                    return Integer.compare(ia, ib);
+                });
             }
+            catch (Exception sortEx) {
+                out("Data/Cabinet/PA.java: Ошибка сортировки: " + sortEx);
+            }
+
+            getCardBalance().clear();
+
+            int j = 0;
+            for (int i = 0; i < cards.size(); i++) {
+                Card c = cards.get(i);
+                if (c == null) {
+                    continue;
+                }
+                if (c.getUserID() != uid) {
+                    continue;
+                }
+
+                out("Data/Cabinet/PA.java: Карта: " + c.getUserID() + ", " + c.getIndexValid());
+                Label lb = new Label("Баланс на карте №" + (j + 1) + ": " + c.getVirtualCash());
+                editLabelPA(lb);
+                getCardBalance().add(lb);
+                j++;
+            }
+
+            if (j == 0) {
+                out("Data/Cabinet/PA.java: Карт для пользователя " + uid + " нет");
+                return;
+            }
+
             getCardVBox().getChildren().setAll(getCardBalance());
         }
         catch (Exception e) {
-            out("Data/Cabinet/PA.java: Ошибка в rebuildCardsBox: " + e.getMessage());
+            e.printStackTrace();
+            out("Data/Cabinet/PA.java: Ошибка в rebuildCardsBox: " + e);
         }
     }
 
