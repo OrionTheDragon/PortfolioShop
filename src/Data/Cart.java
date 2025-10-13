@@ -72,11 +72,6 @@ public class Cart {
     }
     @JsonIgnore
     public VBox getVBoxCart() {
-//        out("getVBoxCart: VBox == null? " + vBoxCart);
-//        if (vBoxCart == null) {
-//            out("getVBoxCart: Создаём в get VBox");
-//            vBoxCart = ;
-//        }
         return vBoxCart;
     }
     public void setVBoxCart(VBox vBoxCart) {
@@ -200,10 +195,6 @@ public class Cart {
         }
 
         out("Data/Cart.java: Загружено товаров по SKU: " + getGoodsList().size());
-    }
-
-    public void attachToTabForVbox() {
-
     }
 
     public void getInterfaceCart(User u) {

@@ -10,18 +10,17 @@ import Data.Card;
 import Data.Cart;
 import Data.User;
 import Shop.Category;
+import Shop.Shop;
 import com.fasterxml.jackson.annotation.*;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.control.Label;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -72,6 +71,9 @@ public class Goods {
 
     @JsonIgnore
     private static List<Goods> allArrGoods;
+
+    @JsonIgnore
+    private static List<Node> backupNodesGoods;
 
     static {
         File file = new File(GOODS_PATH);
@@ -195,6 +197,12 @@ public class Goods {
     public static void setPry(double pry) {
         Goods.pry = pry;
     }
+    public static List<Node> getBackupNodesGoods() {
+        return backupNodesGoods;
+    }
+    public static void setBackupNodesGoods(List<Node> backupNodesGoods) {
+        Goods.backupNodesGoods = backupNodesGoods;
+    }
 
     public double pieceGoods(Goods goods, int steep) {
         double q = 0;
@@ -264,7 +272,10 @@ public class Goods {
         out("Shop/Categories/Goods.java: Вошли в selectedCategories: " + category.name());
         Label label = makeLabel(new Label("Выбрана категория: " + category.getDisplay()));
 
+        out("before clear: " + root.getChildren().size());
         clearRoot(root);
+        out("after clear: " + root.getChildren().size());
+        out("backup size: " + (getBackupNodesGoods() == null ? "null" : getBackupNodesGoods().size()));
 
         HBox subCategory = new HBox(10);
         subCategory.setAlignment(Pos.CENTER);
@@ -303,23 +314,21 @@ public class Goods {
 
         root.getChildren().addAll(label, subCategory, getBack());
 
+        setBackupNodesGoods(backupNode(root));
+
         getBack().setOnAction(_ -> {
-            backShop(user);
+            out("before clear: " + root.getChildren().size());
+            clearRoot(root);
+            out("after clear: " + root.getChildren().size());
+            out("backup size: " + (getBackupNodesGoods() == null ? "null" : getBackupNodesGoods().size()));
+            root.getChildren().setAll(Shop.getBackupNodesShop());
         });
     }
 
     public void choiceGoods(VBox root, Category category, Goods[] items, User user) {
         out("Shop/Categories/Goods.java: Вошли в choiceGoods");
+
         clearRoot(root);
-
-        getShop().getShopTab().selectedProperty().addListener((obs, wasSelected, isNowSelected) -> {
-            if (isNowSelected) {
-                out("Shop/Categories/Goods.java: Повторно вошли во вкладку магазина, обновили окно choiceGoods");
-                choiceGoods(root, category, items, user);
-            }
-        });
-
-//        AtomicReference<Double> allProductPrice = new AtomicReference<>((double) 0);
 
         ArrayList<HBox> hBoxArrayList = new ArrayList<>();
 
@@ -332,7 +341,6 @@ public class Goods {
         if (getShop().getCart() == null) {
             getShop().setCart(new Cart(user.getUserID()));
             user.setItemsInCart(getShop().getCart());
-//            cart.loadCart();
         }
 
         final Cart cartRef = getShop().getCart();
@@ -500,8 +508,22 @@ public class Goods {
 
         root.getChildren().addAll(backSelectedCategories, pryLb);
 
+        out("before clear: " + root.getChildren().size());
+        out("backup size: " + (getBackupNodesGoods() == null ? "null" : getBackupNodesGoods().size()));
+
+        getShop().getShopTab().selectedProperty().addListener((obs, wasSelected, isNowSelected) -> {
+            if (isNowSelected && root.getChildren().contains(backSelectedCategories) && root.getChildren().contains(pryLb)) {
+                out("Shop/Categories/Goods.java: Повторно вошли во вкладку магазина, обновили окно choiceGoods");
+                choiceGoods(root, category, items, user);
+            }
+        });
+
         backSelectedCategories.setOnAction(_-> {
-            selectedCategories(root, category, user);
+            out("before clear: " + root.getChildren().size());
+            clearRoot(root);
+            out("after clear: " + root.getChildren().size());
+            out("backup size: " + (getBackupNodesGoods() == null ? "null" : getBackupNodesGoods().size()));
+            root.getChildren().setAll(getBackupNodesGoods());
         });
     }
 

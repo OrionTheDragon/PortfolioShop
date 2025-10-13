@@ -39,18 +39,6 @@ public class User {
     @JsonIgnore
     private Cart itemsInCart;
 
-//    {
-//        if (getItemsInCart().file.isFile()) {
-//            setItemsInCart(safeReadList(PATH_CART, Cart.class));
-//        }
-//        else if (!itemsInCart.file.isFile()) {
-//            setItemsInCart(new ArrayList<>());
-//        }
-//        else {
-//            out("Непредвиденная ошибка");
-//        }
-//    }
-
     /** Список карт пользователя */
     @JsonIgnore
     private ArrayList<Card> card = new ArrayList<>();

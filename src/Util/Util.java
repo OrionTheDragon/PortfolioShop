@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -802,6 +803,12 @@ public class Util {
         }
         // Создаём Image с нужными размерами
         return new Image(url.toExternalForm(), width, height, preserveRatio, smooth);
+    }
+
+    public static List<Node> backupNode(VBox vBox) {
+        List<Node> bN = new ArrayList<>(vBox.getChildren());
+
+        return bN;
     }
 
     /**

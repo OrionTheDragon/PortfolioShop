@@ -72,6 +72,8 @@ public class Shop {
 
     private Cart cart = new Cart();
 
+    private static List<Node> backupNodesShop;
+
     public PA getPa() {
         return pa;
     }
@@ -198,6 +200,12 @@ public class Shop {
     public void setCart(Cart cart) {
         this.cart = cart;
     }
+    public static List<Node> getBackupNodesShop() {
+        return backupNodesShop;
+    }
+    public static void setBackupNodesShop(List<Node> backupNodesShop) {
+        Shop.backupNodesShop = backupNodesShop;
+    }
 
     public Shop() {
         // грузим картинки
@@ -275,6 +283,8 @@ public class Shop {
         clearRoot(getRootShop());
 
         getRootShop().getChildren().addAll(getLineOne(), getLineTwo());
+
+        setBackupNodesShop(backupNode(getRootShop()));
     }
 
     /**
@@ -301,6 +311,8 @@ public class Shop {
             if (!tabPane.getTabs().contains(getShopTab())) {
                 tabPane.getTabs().add(getShopTab());
             }
+
+            getShopTab().setClosable(false);
 
             getLineOne().getChildren().clear();
             getLineTwo().getChildren().clear();
@@ -382,7 +394,7 @@ public class Shop {
     public void placingAnOrder(VBox root, List<Goods> arrGoods, double allPrice, User u) {
         out("Shop/Categories/Goods.java: Вошли в placingAnOrder");
 
-        List<Node> backupNodes = new ArrayList<>(root.getChildren());
+        List<Node> backupNodes = backupNode(root);
 
         final Cart cartRef = getShop().getCart();
 
@@ -392,7 +404,7 @@ public class Shop {
 
         ArrayList<Card> cards = u.getCard();
 
-        RadioButton[] radioButtons = {new RadioButton("Оплатить наличными"), new RadioButton("Оплатить картой")};
+        ComboBox<Integer> comboBoxes = new ComboBox<>();
 
         ArrayList<Label> cardAllBalance = u.getPa().getCardBalance();
         Label cashBalance = new Label("Наличные средства: " + u.getCash());
@@ -414,18 +426,17 @@ public class Shop {
             root.getChildren().add(makeLabel("Наименование позиции: " + arrGood.getProductName()));
         }
 
-        root.getChildren().addAll(makeLabel("Всего к оплате: " + allPrice + "₽"), DCHbox);
-
-        for (RadioButton rb : radioButtons) {
-            root.getChildren().add(rb);
+        for (Card c : cards) {
+            
         }
+
+        root.getChildren().addAll(makeLabel("Всего к оплате: " + allPrice + "₽"), DCHbox);
 
         cancel.setOnAction(_ -> {
             out("Нажали кнопку возврата в getInterfaceCart");
             out("getShop(): " + getShop().toString());
             out("getCart(): " + getShop().getCart().toString());
             root.getChildren().setAll(backupNodes);
-            cartRef.interfaceCart(u);
         });
     }
 

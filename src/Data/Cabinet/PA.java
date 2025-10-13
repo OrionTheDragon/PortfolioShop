@@ -9,6 +9,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
@@ -78,6 +79,7 @@ public class PA { // ЛК
     /** Вкладка «Личный кабинет», добавляемая в общую TabPane приложения. */
     private Tab personalAccount = new Tab("Личный кабинет");
 
+    private static List<Node> backupNodesPA;
 
     /**
      * Конструктор по умолчанию.
@@ -216,6 +218,12 @@ public class PA { // ЛК
     public void setOpenCart(Button openCart) {
         this.openCart = openCart;
     }
+    public static List<Node> getBackupNodesPA() {
+        return backupNodesPA;
+    }
+    public static void setBackupNodesPA(List<Node> backupNodesPA) {
+        PA.backupNodesPA = backupNodesPA;
+    }
 
     /**
      * Инициализирует заголовочные поля ЛК и перестраивает блок с картами.
@@ -261,6 +269,8 @@ public class PA { // ЛК
                     getSettings(),
                     getExit(),
                     chetMenu);
+
+            setBackupNodesPA(backupNode(getRootMainMenu()));
 
             if (!isFlowIsItWorking() ) {
                 balanceMoneyAll();
@@ -339,6 +349,7 @@ public class PA { // ЛК
             if (!tabPane.getTabs().contains(getPersonalAccount())) {
                 try {
                     tabPane.getTabs().add(getPersonalAccount());
+                    getPersonalAccount().setClosable(false);
                 }
                 catch (Exception e) {
                     out("Data/Cabinet/PA.java: Ошибка добавления вкладки ЛК: " + e.getMessage());

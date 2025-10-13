@@ -1,12 +1,14 @@
 package Data.Cabinet;
 
 import Data.Card;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import Ui.Main;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.List;
 
 import static Data.Card.PATH_CARD;
 import static Util.CreateCard.createCard;
@@ -58,11 +60,15 @@ public class SettingsMenu {
                              PA pa) {
 
         try {
+            List<Node> backupNodes = backupNode(root);
+
             clearRoot(root);
 
             root.getChildren().addAll(getChangeData(),
                     getAddCard(),
                     getBack());
+
+            List<Node> backupNodesSettingsMenu = backupNode(root);
 
             getAddCard().setOnAction(_ -> {
                 try {
@@ -78,7 +84,7 @@ public class SettingsMenu {
             getBack().setOnAction(_ -> {
                 try {
                     out("Data/Cabinet/SettingsMenu.java: Возвращаемся в mainMenu");
-                    pa.mainMenu();
+                    root.getChildren().setAll(backupNodes);
                 }
                 catch (Exception e) {
                     out("Data/Cabinet/SettingsMenu.java: Ошибка возврата в mainMenu: " + e.getMessage());
@@ -123,9 +129,7 @@ public class SettingsMenu {
 
                     back.setOnAction(__ -> {
                         try {
-                            settingsMenu(root,
-                                    personalAccount,
-                                    pa);
+                            root.getChildren().setAll(backupNodesSettingsMenu);
                         }
                         catch (Exception e) {
                             out("Data/Cabinet/SettingsMenu.java: Ошибка возврата из проверки пароля: " + e.getMessage());
@@ -183,6 +187,8 @@ public class SettingsMenu {
             // Кнопка «Назад» (локальная для подэкранов): вернуться из подэкрана в список действий этого экрана
             Button backward = new Button("Назад");
 
+            List<Node> backupNodes = backupNode(root);
+
             clearRoot(root);
 
             root.getChildren().addAll(editName,
@@ -190,6 +196,8 @@ public class SettingsMenu {
                     editPass,
                     delCard,
                     back);
+
+            List<Node> backupNodesEditData = backupNode(root);
 
             out("Data/Cabinet/SettingsMenu.java: Поле editData создано");
 
@@ -402,9 +410,7 @@ public class SettingsMenu {
             backward.setOnAction(_ -> {
                 try {
                     out("Data/Cabinet/SettingsMenu.java: Возвращаемся в editData...");
-                    editData(root,
-                            personalAccount,
-                            pa);
+                    root.getChildren().setAll(backupNodesEditData);
                 }
                 catch (Exception e) {
                     out("Data/Cabinet/SettingsMenu.java: Ошибка возврата в editData: " + e.getMessage());
@@ -415,7 +421,7 @@ public class SettingsMenu {
             back.setOnAction(_ -> {
                 try {
                     out("Data/Cabinet/SettingsMenu.java: Возвращаемся в settingsMenu");
-                    settingsMenu(root, personalAccount, pa);
+                    root.getChildren().setAll(backupNodes);
                 }
                 catch (Exception e) {
                     out("Data/Cabinet/SettingsMenu.java: Ошибка возврата в settingsMenu: " + e.getMessage());

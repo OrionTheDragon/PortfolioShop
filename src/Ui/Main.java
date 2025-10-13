@@ -5,6 +5,7 @@ import Data.User;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -95,12 +96,13 @@ public class Main extends Application {
     /** Файл сохранения пользователей, созданный по пути {@link #PATH}. */
     private File saveFile = new File(PATH);
 
+    private static List<Node> backupNodeMain;
+
     /** Кэш пользователей, считанный из {@link #PATH}. */
     private static List<User> userList = safeReadList(PATH, User.class);
 
     /** Глобальная ссылка на текущий экземпляр приложения для удобного доступа из других классов. */
     public static Main INSTANCE;
-
 
     // Блок get и set ------->
     public VBox getRoot() {
@@ -235,6 +237,12 @@ public class Main extends Application {
     public static void setShop(Shop shop) {
         Main.shop = shop;
     }
+    public static List<Node> getBackupNodeMain() {
+        return backupNodeMain;
+    }
+    public static void setBackupNodeMain(List<Node> backupNodeMain) {
+        Main.backupNodeMain = backupNodeMain;
+    }
     // <------- Конец блока
 
     // Блок запуска приложения ------->
@@ -307,6 +315,8 @@ public class Main extends Application {
             getRoot().getChildren().addAll(getAddAccount(),
                     getLoginAccount(),
                     getExit());
+
+            setBackupNodeMain(backupNode(getRoot()));
 
             getAddAccount().setOnAction(_ -> {
                 try {
@@ -429,7 +439,7 @@ public class Main extends Application {
             getButtonBack().setOnAction(_ -> {
                 try {
                     out("Ui/Main.java: Возвращаемся");
-                    menuLog();
+                    getRoot().getChildren().setAll(getBackupNodeMain());
                 }
                 catch (Exception e) {
                     out("Ui/Main.java: Ошибка при возврате из входа: " + e);
@@ -474,6 +484,7 @@ public class Main extends Application {
             else {
                 out("Ui/Main.java: Кнопки уже существуют, добавлять не нужно");
             }
+
             getButton().setAlignment(Pos.CENTER);
             getTextName().setPromptText("Введите ваше имя");
             getTextCash().setPromptText("Введите количество наличных средств");
@@ -590,7 +601,7 @@ public class Main extends Application {
             getButtonBack().setOnAction(_ -> {
                 try {
                     out("Ui/Main.java: Возвращаемся");
-                    menuLog();
+                    getRoot().getChildren().setAll(getBackupNodeMain());
                 }
                 catch (Exception ex) {
                     out("Ui/Main.java: Ошибка при возврате из регистрации: " + ex.getMessage());
@@ -638,10 +649,7 @@ public class Main extends Application {
             no.setOnAction(_ -> {
                 try {
                     out("Data/Cabinet/PA.java: Не закрываем приложение, возвращаемся в start");
-                    clearRoot(getRoot());
-                    getRoot().getChildren().addAll(addAccount,
-                            loginAccount,
-                            exit);
+                    getRoot().getChildren().setAll(getBackupNodeMain());
                 }
                 catch (Exception e) {
                     out("Ui/Main.java: Ошибка при возврате из выхода: " + e.getMessage());
