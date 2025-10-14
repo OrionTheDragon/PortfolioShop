@@ -26,9 +26,12 @@ import static Shop.Shop.tabPane;
 
 /**
  * Главный класс JavaFX-приложения «Фейк магазин».
- * <p>
+ *
  * Отвечает за старт UI, показ главного меню, регистрацию/вход пользователя и выход из приложения.
  * В методах и обработчиках событий добавлены перехваты исключений (try/catch) для безопасного UX.
+ *
+ * Примечание по изменениям: в файл были добавлены только комментарии и документация (Javadoc) к
+ * сложным местам и к секциям с потенциальными точками отказа. Логика и порядок вызовов не изменялись.
  */
 public class Main extends Application {
 
@@ -96,6 +99,7 @@ public class Main extends Application {
     /** Файл сохранения пользователей, созданный по пути {@link #PATH}. */
     private File saveFile = new File(PATH);
 
+    /** Нода для возврата на начальный экран */
     private static List<Node> backupNodeMain;
 
     /** Кэш пользователей, считанный из {@link #PATH}. */
@@ -105,150 +109,60 @@ public class Main extends Application {
     public static Main INSTANCE;
 
     // Блок get и set ------->
-    public VBox getRoot() {
-        return root;
-    }
-    public void setRoot(VBox root) {
-        this.root = root;
-    }
-    public ComboBox<Byte> getComboBoxAge() {
-        return comboBoxAge;
-    }
-    public Label getLabelName() {
-        return labelName;
-    }
-    public void setLabelName(Label labelName) {
-        this.labelName = labelName;
-    }
-    public Label getLabelCash() {
-        return labelCash;
-    }
-    public void setLabelCash(Label labelCash) {
-        this.labelCash = labelCash;
-    }
-    public Button getButtonSave() {
-        return buttonSave;
-    }
-    public void setButtonSave(Button buttonSave) {
-        this.buttonSave = buttonSave;
-    }
-    public Button getButtonBack() {
-        return buttonBack;
-    }
-    public void setButtonBack(Button buttonBack) {
-        this.buttonBack = buttonBack;
-    }
-    public Button getAddAccount() {
-        return addAccount;
-    }
-    public void setAddAccount(Button addAccount) {
-        this.addAccount = addAccount;
-    }
-    public Button getLoginAccount() {
-        return loginAccount;
-    }
-    public void setLoginAccount(Button loginAccount) {
-        this.loginAccount = loginAccount;
-    }
-    public Button getExit() {
-        return exit;
-    }
-    public void setExit(Button exit) {
-        this.exit = exit;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public byte getAge() {
-        return age;
-    }
-    public void setAge(byte age) {
-        this.age = age;
-    }
-    public double getCash() {
-        return cash;
-    }
-    public void setCash(double cash) {
-        this.cash = cash;
-    }
-    public HBox getButton() {
-        return button;
-    }
-    public void setButton(HBox button) {
-        this.button = button;
-    }
-    public TextArea getTextName() {
-        return textName;
-    }
-    public void setTextName(TextArea textName) {
-        this.textName = textName;
-    }
-    public TextArea getTextCash() {
-        return textCash;
-    }
-    public void setTextCash(TextArea textCash) {
-        this.textCash = textCash;
-    }
-    public Label getLabelAge() {
-        return labelAge;
-    }
-    public void setLabelAge(Label labelAge) {
-        this.labelAge = labelAge;
-    }
-    public User getUser() {
-        return user;
-    }
-    public void setUser(User user) {
-        this.user = user;
-    }
-    public Label getLabelPass() {
-        return labelPass;
-    }
-    public void setLabelPass(Label labelPass) {
-        this.labelPass = labelPass;
-    }
-    public String getPassword() {
-        return password;
-    }
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public TextArea getTextPass() {
-        return textPass;
-    }
-    public void setTextPass(TextArea textPass) {
-        this.textPass = textPass;
-    }
-    public File getSaveFile() {
-        return saveFile;
-    }
-    public static List<User> getUserList() {
-        return userList;
-    }
-    public static void setUserList(List<User> userList) {
-        Main.userList = userList;
-    }
-    public static Shop getShop() {
-        return shop;
-    }
-    public static void setShop(Shop shop) {
-        Main.shop = shop;
-    }
-    public static List<Node> getBackupNodeMain() {
-        return backupNodeMain;
-    }
-    public static void setBackupNodeMain(List<Node> backupNodeMain) {
-        Main.backupNodeMain = backupNodeMain;
-    }
+    public VBox getRoot() { return root; }
+    public void setRoot(VBox root) { this.root = root; }
+    public ComboBox<Byte> getComboBoxAge() { return comboBoxAge; }
+    public Label getLabelName() { return labelName; }
+    public void setLabelName(Label labelName) { this.labelName = labelName; }
+    public Label getLabelCash() { return labelCash; }
+    public void setLabelCash(Label labelCash) { this.labelCash = labelCash; }
+    public Button getButtonSave() { return buttonSave; }
+    public void setButtonSave(Button buttonSave) { this.buttonSave = buttonSave; }
+    public Button getButtonBack() { return buttonBack; }
+    public void setButtonBack(Button buttonBack) { this.buttonBack = buttonBack; }
+    public Button getAddAccount() { return addAccount; }
+    public void setAddAccount(Button addAccount) { this.addAccount = addAccount; }
+    public Button getLoginAccount() { return loginAccount; }
+    public void setLoginAccount(Button loginAccount) { this.loginAccount = loginAccount; }
+    public Button getExit() { return exit; }
+    public void setExit(Button exit) { this.exit = exit; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public byte getAge() { return age; }
+    public void setAge(byte age) { this.age = age; }
+    public double getCash() { return cash; }
+    public void setCash(double cash) { this.cash = cash; }
+    public HBox getButton() { return button; }
+    public void setButton(HBox button) { this.button = button; }
+    public TextArea getTextName() { return textName; }
+    public void setTextName(TextArea textName) { this.textName = textName; }
+    public TextArea getTextCash() { return textCash; }
+    public void setTextCash(TextArea textCash) { this.textCash = textCash; }
+    public Label getLabelAge() { return labelAge; }
+    public void setLabelAge(Label labelAge) { this.labelAge = labelAge; }
+    public User getUser() { return user; }
+    public void setUser(User user) { this.user = user; }
+    public Label getLabelPass() { return labelPass; }
+    public void setLabelPass(Label labelPass) { this.labelPass = labelPass; }
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+    public TextArea getTextPass() { return textPass; }
+    public void setTextPass(TextArea textPass) { this.textPass = textPass; }
+    public File getSaveFile() { return saveFile; }
+    public static List<User> getUserList() { return userList; }
+    public static void setUserList(List<User> userList) { Main.userList = userList; }
+    public static Shop getShop() { return shop; }
+    public static void setShop(Shop shop) { Main.shop = shop; }
+    public static List<Node> getBackupNodeMain() { return backupNodeMain; }
+    public static void setBackupNodeMain(List<Node> backupNodeMain) { Main.backupNodeMain = backupNodeMain; }
     // <------- Конец блока
 
     // Блок запуска приложения ------->
     /**
      * Точка входа JavaFX-приложения.
-     * @param stage Сцена.
+     *
+     * Этот метод отвечает за инициализацию UI: подготовку меток, сцены и запуск главного меню.
+     * Любые ошибки стартового процесса логируются и показывают пользователю краткое сообщение.
      */
     @Override
     public void start(Stage stage) {
@@ -258,7 +172,7 @@ public class Main extends Application {
             INSTANCE = this;
             primaryStage = stage;
 
-            // Настройки Этикеток
+            // Настройки Этикеток — отдельная точка, где внешний util форматирует Label'ы
             setLabelName(makeLabel(getLabelName()));
             setLabelPass(makeLabel(getLabelPass()));
             setLabelAge(makeLabel(getLabelAge()));
@@ -270,14 +184,17 @@ public class Main extends Application {
             stage.setTitle("Фейк магазин");
             stage.show();
 
+            // Показать главное меню. menuLog содержит собственные перехваты.
             menuLog();
         }
         catch (Exception e) {
+            // Здесь — единственная безопасная попытка показать сообщение об ошибке во время старта.
             out("Ui/Main.java: Ошибка при старте приложения: " + e.getMessage());
             try {
                 errMess(getRoot(), "Произошла ошибка запуска: " + e.getMessage());
             }
             catch (Exception ignored) {
+                // errMess может упасть, если UI не инициализирован — в этом случае просто логируем.
                 out("Приложение не готово: " + ignored.getMessage());
             }
         }
@@ -288,6 +205,10 @@ public class Main extends Application {
     /**
      * Отрисовывает главное меню (регистрация/вход/выход).
      * Обновляет сцену, выставляет обработчики.
+     *
+     * Комментарий по ошибкам: здесь важно ловить любые исключения при взаимодействии с tabPane и root,
+     * так как они могут быть модифицированы из других частей приложения. Вся критичная логика окружена
+     * try/catch, чтобы UI не упал полностью.
      */
     public void menuLog() {
         try {
@@ -316,8 +237,11 @@ public class Main extends Application {
                     getLoginAccount(),
                     getExit());
 
+            // Сохраняем точку возврата — backupNode служит для восстановления интерфейса
             setBackupNodeMain(backupNode(getRoot()));
 
+            // Обработчики кнопок: в обработчиках дополнительно ловим исключения, т.к. они могут возникать
+            // как при логике экрана, так и при взаимодействии с файловой системой/Shop.
             getAddAccount().setOnAction(_ -> {
                 try {
                     addsAccount();
@@ -349,6 +273,7 @@ public class Main extends Application {
             });
         }
         catch (Exception e) {
+            // Общий обработчик для menuLog: защищает сборку главного меню от непредвиденных сбоев.
             out("Ui/Main.java: Ошибка при формировании главного меню: " + e.getMessage());
             errMess(getRoot(), "Ошибка главного меню: " + e.getMessage());
         }
@@ -359,6 +284,12 @@ public class Main extends Application {
     /**
      * Экран входа: проверяет наличие файла сохранения, показывает поля логина/пароля.
      * При успешной проверке открывает магазин.
+     *
+     *     Подробности и уязвимые точки:
+     * - Чтение списка пользователей происходит из кэша {@link #userList}. При повреждении файла возможен
+     *   NPE или пустой список — это обрабатывается и отображается пользователю.
+     * - Обработчик нажатия кнопки входа содержит в себе логику поиска пользователя и проверки пароля;
+     *   ошибки в этой логике безопасно перехватываются и выводятся в UI.
      */
     public void loginsAccount() {
         try {
@@ -377,7 +308,7 @@ public class Main extends Application {
 
                 Label[] labelExam = { makeLabel("Введите имя"), makeLabel("Введите пароль") };
                 TextArea loginField = new TextArea();
-                TextArea passField  = new TextArea();
+                TextArea passField  = new TextArea(); // лучше PasswordField, см. примечание ниже
                 loginField.setPrefSize(horizontally, 20);
                 passField.setPrefSize(horizontally, 20);
 
@@ -391,6 +322,7 @@ public class Main extends Application {
 
                 out("Ui/Main.java: Создалось окно входа в аккаунт");
 
+                // Обработчик кнопки входа.
                 login.setOnAction(_ -> {
                     try {
                         String name = loginField.getText().trim();
@@ -424,6 +356,7 @@ public class Main extends Application {
                         getShop().shop(getRoot(), found);
                     }
                     catch (Exception e) {
+                        // Здесь ключевой момент — отлов исключений в процессе проверки и инициирования сессии.
                         out("Ui/Main.java: Ошибка при входе: " + e);
                         e.printStackTrace(); // на время дебага — видеть стек
                         errMess(getRoot(), "Не удалось выполнить вход: " + (e.getMessage() == null ? e.toString() : e.getMessage()));
@@ -449,6 +382,7 @@ public class Main extends Application {
 
         }
         catch (Exception e) {
+            // Защищаем создание экрана входа от неожиданных ошибок (например, доступ к первичным ресурсам).
             out("Ui/Main.java: Ошибка экрана входа: " + e);
             e.printStackTrace(); // добавь стек для реальной причины
             errMess(getRoot(), "Ошибка экрана входа: " + (e.getMessage() == null ? e.toString() : e.getMessage()));
@@ -459,6 +393,14 @@ public class Main extends Application {
     // Блок инициализации действия кнопки добавить аккаунт. ------->
     /**
      * Экран регистрации: собирает имя/пароль/возраст/сумму, проверяет ввод, сохраняет пользователя.
+     *
+     * Критические моменты и пояснения:
+     * - Подсчёт нового ID пользователя выполняется через {@link AtomicInteger} — это простая эмпирическая
+     *   реализация для последовательного присвоения ID при старте приложения.
+     * - При парсинге строки суммы возможен {@link NumberFormatException} — это ловится и аккуратно
+     *   показывается пользователю как сообщение об ошибке.
+     * - Операция append(Path.of(PATH), getUser()) взаимодействует с файловой системой; возможны
+     *   IOException и другие низкоуровневые ошибки — они логируются, но не ломают UI.
      */
     public void addsAccount() {
         try {
@@ -504,6 +446,7 @@ public class Main extends Application {
 
             out("Ui/Main.java: VBox - root заполнен");
 
+            // Обработчик сохранения нового пользователя.
             getButtonSave().setOnAction(e -> {
                 try {
                     out("Ui/Main.java: Начался процесс сохранения");
@@ -534,6 +477,7 @@ public class Main extends Application {
                             }
                         }
                         catch (NumberFormatException ex) {
+                            // Явная обработка некорректного ввода числа — пользователь увидит сообщение.
                             err.append("/Сумма наличных должна быть числом\n");
                         }
                     }
@@ -578,9 +522,11 @@ public class Main extends Application {
                     setUser(new User(indexUser.get(), getName(), getPassword(), getAge(), getCash()));
 
                     out("Ui/Main.java: Вызвали appendUser");
+                    // Операция записи в файл: возможны исключения, которые логируются
                     append(Path.of(PATH), getUser());
 
                     try {
+                        // Перечитываем актуальный список пользователей после записи
                         setUserList(safeReadList(PATH, User.class));
                     }
                     catch (Exception re) {
@@ -593,11 +539,13 @@ public class Main extends Application {
                     getShop().shop(getRoot(), getUser());
                 }
                 catch (Exception ex) {
+                    // Лог и пользовательское сообщение при общей ошибке сохранения.
                     out("Ui/Main.java: Ошибка при сохранении пользователя: " + ex.getMessage());
                     errMess(getRoot(), "Не удалось сохранить пользователя: " + ex.getMessage());
                 }
             });
 
+            // Обработчик кнопки "Назад" — восстанавливает сохранённый UI
             getButtonBack().setOnAction(_ -> {
                 try {
                     out("Ui/Main.java: Возвращаемся");
@@ -623,6 +571,9 @@ public class Main extends Application {
     // Блок инициализации действий кнопки выйти. ------->
     /**
      * Показывает подтверждение выхода и закрывает приложение по нажатию «Да».
+     *
+     * Примечание: Platform.exit() вызывает завершение JavaFX-приложения. Любые исключения в этом
+     * блоке логируются, но приложение пытается корректно завершиться.
      */
     public void exits() {
         try {
