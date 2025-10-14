@@ -377,7 +377,7 @@ public class Main extends Application {
 
                 Label[] labelExam = { makeLabel("Введите имя"), makeLabel("Введите пароль") };
                 TextArea loginField = new TextArea();
-                TextArea passField  = new TextArea(); // лучше PasswordField, см. примечание ниже
+                TextArea passField  = new TextArea();
                 loginField.setPrefSize(horizontally, 20);
                 passField.setPrefSize(horizontally, 20);
 
