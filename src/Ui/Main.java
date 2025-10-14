@@ -465,7 +465,7 @@ public class Main extends Application {
 
                     StringBuilder err = new StringBuilder();
                     if (nameText.isEmpty() || passText.isEmpty() || ageValue == null || ageValue == 0) {
-                        err.append("Одно из полей не заполнено");
+                        err.append("Одно из полей не заполнено\n");
                     }
 
                     double cashValue = 0.0;
@@ -478,7 +478,7 @@ public class Main extends Application {
                         }
                         catch (NumberFormatException ex) {
                             // Явная обработка некорректного ввода числа — пользователь увидит сообщение.
-                            err.append("/Сумма наличных должна быть числом\n");
+                            err.append("Сумма наличных должна быть числом\n");
                         }
                     }
 
