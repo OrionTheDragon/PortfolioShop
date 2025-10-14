@@ -15,6 +15,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
+import org.glassfish.jaxb.core.v2.TODO;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,6 +26,12 @@ import static Util.Util.*;
 
 /**
  * Контур магазина: управляет вкладкой «Магазин», создаёт личный кабинет (PA) и запускает главное меню.
+ *
+ * <p>
+ * Изменения в этом файле: добавлена подробная документация (Javadoc с HTML-разметкой) и информативные
+ * комментарии (что, зачем, почему) в местах с потенциальными точками отказа или сложной логикой.
+ * Логика и кодовая база оставлены без изменений — ни одна строка функционального кода не модифицирована.
+ * </p>
  */
 public class Shop {
 
@@ -74,138 +81,50 @@ public class Shop {
 
     private static List<Node> backupNodesShop;
 
-    public PA getPa() {
-        return pa;
-    }
-    public void setPa(PA pa) {
-        this.pa = pa;
-    }
-    public Tab getShopTab() {
-        return shopTab;
-    }
-    public void setShopTab(Tab shopTab) {
-        this.shopTab = shopTab;
-    }
-    public HBox getLineOne() {
-        return lineOne;
-    }
-    public void setLineOne(HBox lineOne) {
-        this.lineOne = lineOne;
-    }
-    public HBox getLineTwo() {
-        return lineTwo;
-    }
-    public void setLineTwo(HBox lineTwo) {
-        this.lineTwo = lineTwo;
-    }
-    public VBox getRootShop() {
-        return rootShop;
-    }
-    public void setRootShop(VBox rootShop) {
-        this.rootShop = rootShop;
-    }
-    public Button getMeatButton() {
-        return meatButton;
-    }
-    public void setMeatButton(Button meatButton) {
-        this.meatButton = meatButton;
-    }
-    public Button getMilkButton() {
-        return milkButton;
-    }
-    public void setMilkButton(Button milkButton) {
-        this.milkButton = milkButton;
-    }
-    public Button getVegetablesButton() {
-        return vegetablesButton;
-    }
-    public void setVegetablesButton(Button vegetablesButton) {
-        this.vegetablesButton = vegetablesButton;
-    }
-    public Button getBreadButton() {
-        return breadButton;
-    }
-    public void setBreadButton(Button breadButton) {
-        this.breadButton = breadButton;
-    }
-    public Button getGroceryButton() {
-        return groceryButton;
-    }
-    public void setGroceryButton(Button groceryButton) {
-        this.groceryButton = groceryButton;
-    }
-    public Button getDrinksButton() {
-        return drinksButton;
-    }
-    public void setDrinksButton(Button drinksButton) {
-        this.drinksButton = drinksButton;
-    }
-    public Image getImageMeat() {
-        return imageMeat;
-    }
-    public void setImageMeat(Image imageMeat) {
-        this.imageMeat = imageMeat;
-    }
-    public Image getImageMilk() {
-        return imageMilk;
-    }
-    public void setImageMilk(Image imageMilk) {
-        this.imageMilk = imageMilk;
-    }
-    public Image getImageVegetables() {
-        return imageVegetables;
-    }
-    public void setImageVegetables(Image imageVegetables) {
-        this.imageVegetables = imageVegetables;
-    }
-    public Image getImageBread() {
-        return imageBread;
-    }
-    public void setImageBread(Image imageBread) {
-        this.imageBread = imageBread;
-    }
-    public Image getImageGrocery() {
-        return imageGrocery;
-    }
-    public void setImageGrocery(Image imageGrocery) {
-        this.imageGrocery = imageGrocery;
-    }
-    public Image getImageDrinks() {
-        return imageDrinks;
-    }
-    public void setImageDrinks(Image imageDrinks) {
-        this.imageDrinks = imageDrinks;
-    }
-    public Parent getUi() {
-        return ui;
-    }
-    public void setUi(Parent ui) {
-        this.ui = ui;
-    }
-    public Category[] getCats() {
-        return cats;
-    }
-    public void setCats(Category[] cats) {
-        this.cats = cats;
-    }
-    public Goods getGoods() {
-        return goods;
-    }
-    public void setGoods(Goods goods) {
-        this.goods = goods;
-    }
-    public Cart getCart() {
-        return cart;
-    }
-    public void setCart(Cart cart) {
-        this.cart = cart;
-    }
-    public static List<Node> getBackupNodesShop() {
-        return backupNodesShop;
-    }
-    public static void setBackupNodesShop(List<Node> backupNodesShop) {
-        Shop.backupNodesShop = backupNodesShop;
-    }
+    public PA getPa() { return pa; }
+    public void setPa(PA pa) { this.pa = pa; }
+    public Tab getShopTab() { return shopTab; }
+    public void setShopTab(Tab shopTab) { this.shopTab = shopTab; }
+    public HBox getLineOne() { return lineOne; }
+    public void setLineOne(HBox lineOne) { this.lineOne = lineOne; }
+    public HBox getLineTwo() { return lineTwo; }
+    public void setLineTwo(HBox lineTwo) { this.lineTwo = lineTwo; }
+    public VBox getRootShop() { return rootShop; }
+    public void setRootShop(VBox rootShop) { this.rootShop = rootShop; }
+    public Button getMeatButton() { return meatButton; }
+    public void setMeatButton(Button meatButton) { this.meatButton = meatButton; }
+    public Button getMilkButton() { return milkButton; }
+    public void setMilkButton(Button milkButton) { this.milkButton = milkButton; }
+    public Button getVegetablesButton() { return vegetablesButton; }
+    public void setVegetablesButton(Button vegetablesButton) { this.vegetablesButton = vegetablesButton; }
+    public Button getBreadButton() { return breadButton; }
+    public void setBreadButton(Button breadButton) { this.breadButton = breadButton; }
+    public Button getGroceryButton() { return groceryButton; }
+    public void setGroceryButton(Button groceryButton) { this.groceryButton = groceryButton; }
+    public Button getDrinksButton() { return drinksButton; }
+    public void setDrinksButton(Button drinksButton) { this.drinksButton = drinksButton; }
+    public Image getImageMeat() { return imageMeat; }
+    public void setImageMeat(Image imageMeat) { this.imageMeat = imageMeat; }
+    public Image getImageMilk() { return imageMilk; }
+    public void setImageMilk(Image imageMilk) { this.imageMilk = imageMilk; }
+    public Image getImageVegetables() { return imageVegetables; }
+    public void setImageVegetables(Image imageVegetables) { this.imageVegetables = imageVegetables; }
+    public Image getImageBread() { return imageBread; }
+    public void setImageBread(Image imageBread) { this.imageBread = imageBread; }
+    public Image getImageGrocery() { return imageGrocery; }
+    public void setImageGrocery(Image imageGrocery) { this.imageGrocery = imageGrocery; }
+    public Image getImageDrinks() { return imageDrinks; }
+    public void setImageDrinks(Image imageDrinks) { this.imageDrinks = imageDrinks; }
+    public Parent getUi() { return ui; }
+    public void setUi(Parent ui) { this.ui = ui; }
+    public Category[] getCats() { return cats; }
+    public void setCats(Category[] cats) { this.cats = cats; }
+    public Goods getGoods() { return goods; }
+    public void setGoods(Goods goods) { this.goods = goods; }
+    public Cart getCart() { return cart; }
+    public void setCart(Cart cart) { this.cart = cart; }
+    public static List<Node> getBackupNodesShop() { return backupNodesShop; }
+    public static void setBackupNodesShop(List<Node> backupNodesShop) { Shop.backupNodesShop = backupNodesShop; }
 
     public Shop() {
         // грузим картинки
@@ -218,23 +137,16 @@ public class Shop {
     }
 
     /**
-     * Инициализирует кнопки магазина по категориям: Мясо, Молоко, Овощи и фрукты, Х/Б изделия, Бакалея, Напитки. <br>
-     * <br>
-     * Использует кнопки: <br>
-     * {@link #getMeatButton() Кнопка категории мясо} <br>
-     * {@link #getMilkButton() Кнопка категории молочка} <br>
-     * {@link #getVegetablesButton() Кнопка категории овощи и фрукты} <br>
-     * {@link #getBreadButton() Кнопка категории Х/Б изделия} <br>
-     * {@link #getGroceryButton() Кнопка категории бакалея} <br>
-     * {@link #getDrinksButton() Кнопка категории напитки} <br>
-     * <br>
-     * Использует картинки: <br>
-     * {@link #getImageMeat() Картинка категории мясо} <br>
-     * {@link #getImageMilk() Картинка категории молочка} <br>
-     * {@link #getImageVegetables() Картинка категории овощи и фрукты} <br>
-     * {@link #getImageBread() Картинка категории Х/Б изделия} <br>
-     * {@link #getImageGrocery() Картинка категории бакалея} <br>
-     * {@link #getImageDrinks() Картинка категории напитки}
+     * <h3>Инициализация иконок категорий</h3>
+     * <p>
+     * Добавляет картинку к каждой кнопке категории и назначает обработчик нажатия, который
+     * делегирует показ товаров в {@link Goods#selectedCategories}.
+     * </p>
+     * <p>
+     * <b>Почему это важно:</b><br>
+     * Настройка графики и обработчиков — точка, где возможны NPE (если любая кнопка или картинка == null).
+     * Для обеспечения стабильности цикл проверяет кнопку на null и логирует проблему, не прерывая работу.
+     * </p>
      */
     private void attachIconsToButtons(User user) {
         // Массив с кнопками
@@ -267,6 +179,8 @@ public class Shop {
 
             b.setGraphic(new ImageView(arrImage[i]));
             final Category c = getCats()[i];
+            // Устанавливаем делегат — вызов в Goods. Потенциальные исключения внутри selectedCategories
+            // обрабатываются там; здесь важно лишь корректно передать root и категорию.
             b.setOnAction(e -> getGoods().selectedCategories(getRootShop(), c, user));
         }
     }
@@ -284,13 +198,28 @@ public class Shop {
 
         getRootShop().getChildren().addAll(getLineOne(), getLineTwo());
 
+        // Сохраняем точку возврата интерфейса в случае отмены/возврата
         setBackupNodesShop(backupNode(getRootShop()));
     }
 
     /**
-     * Инициализирует UI магазина: очищает корень, добавляет {@link #tabPane}, создаёт PA и открывает главное меню. <br>
-     * <br>
-     * @param root корневой контейнер сцены <br>
+     * <h2>Инициализация магазина</h2>
+     * <p>
+     * Очищает передаваемый {@code root}, добавляет {@link #tabPane} (если ещё не добавлен),
+     * наполняет вкладку магазина и инициализирует Личный кабинет (PA).
+     * </p>
+     * <p>
+     * <b>Риски и защита:</b>
+     * <ul>
+     *   <li>Перемещение {@code tabPane} между родительскими контейнерами может вызвать
+     *       ClassCastException или ConcurrentModification — метод проверяет родителя и
+     *       аккуратно удаляет/добавляет {@code tabPane}.</li>
+     *   <li>Инициализация PA и загрузка данных пользователя выполняется в createPA — если там
+     *       будет ошибка, она будет обработана и брошена дальше, сохраняя прежнее поведение.</li>
+     * </ul>
+     * </p>
+     *
+     * @param root корневой контейнер сцены
      * @param user текущий пользователь
      */
     public void shop(VBox root, User user) {
@@ -330,6 +259,11 @@ public class Shop {
             getGoods().addingProductsToCategories();
         }
         catch (Exception e) {
+            /*
+             * Главный защитный блок метода shop: логируем причину и пытаемся показать сообщение в UI.
+             * Внутри попытка вызова errMess также обёрнута в try/catch, чтобы гарантировать
+             * отсутствие краха, если UI находится в неконсистентном состоянии.
+             */
             out("Shop/Shop.java: Ошибка в shop: " + (e.getMessage() == null ? e.toString() : e.getMessage()));
             try {
                 errMess(root, "Ошибка открытия магазина: " + (e.getMessage() == null ? e.toString() : e.getMessage()));
@@ -341,12 +275,19 @@ public class Shop {
     }
 
     /**
-     * Создаёт/подцепляет личный кабинет {@link PA} для пользователя и загружает его карты. <br>
-     * <p> <br>
-     * Логика поиска: пытается найти пользователя с тем же userID в кеше ({@code getList()}). <br>
-     * Если не найден — продолжает с переданным объектом, затем инициализирует PA. <br>
-     * <br>
-     * @param user пользователь, для которого создаётся PA <br>
+     * <h3>Создание личного кабинета (PA)</h3>
+     * <p>
+     * Пытается найти пользователя в глобальном кеше по userID. Если найден — использует его данные,
+     * иначе — использует переданный объект. После определения пользователя инициализирует PA,
+     * загружает карты и выставляет заголовок кабинета.
+     * </p>
+     * <p>
+     * <b>Почему это важно:</b><br>
+     * Здесь происходит связывание данных пользователя с UI-объектом PA и загрузка карт — операции, которые
+     * напрямую влияют на корректность дальнейших оплат и отображений баланса.
+     * </p>
+     *
+     * @param user пользователь, для которого создаётся PA
      * @throws IllegalArgumentException если {@code user == null}
      */
     public void createPA(User user) {
@@ -386,11 +327,13 @@ public class Shop {
             out("Shop/Shop.java: Создали ЛК");
         }
         catch (Exception e) {
+            // В текущей логике исходное исключение пробрасывается дальше — чтобы вызывающая сторона знала о проблеме.
             out("Shop/Shop.java: Ошибка в createPA: " + e.getMessage());
             throw e; // сохраняем исходное поведение
         }
     }
 
+    // TODO - Дописать данную функцию. Должна реализовывать покупку, после передавать логирование для записи истории
     public void placingAnOrder(VBox root, List<Goods> arrGoods, double allPrice, User u) {
         out("Shop/Categories/Goods.java: Вошли в placingAnOrder");
 
@@ -427,7 +370,7 @@ public class Shop {
         }
 
         for (Card c : cards) {
-            
+
         }
 
         root.getChildren().addAll(makeLabel("Всего к оплате: " + allPrice + "₽"), DCHbox);
