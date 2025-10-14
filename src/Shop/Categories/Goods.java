@@ -214,51 +214,99 @@ public class Goods {
         return q;
     }
 
+    /**
+     * Вычисляет стоимость определённого количества товара.<br>
+     * <b>Принцип работы:</b> если количество товара больше 0, умножаем цену одной единицы на количество.<br>
+     * В случае ошибки возвращается 0 и выводится стек ошибки.
+     *
+     * @param goods объект товара
+     * @param steep количество единиц товара
+     * @return общая стоимость товаров (0, если количество <= 0 или возникла ошибка)
+     */
+    public double pieceGoods(Goods goods, int steep) {
+        double q = 0;
+
+        try {
+            if (steep > 0) {
+                // Умножение цены одной единицы на количество
+                q = goods.getPrice() * steep;
+            }
+        } catch (Exception e) {
+            // Ловим любые неожиданные ошибки при вычислении стоимости
+            e.printStackTrace();
+        }
+
+        return q;
+    }
+
+    /**
+     * Добавляет все товары в категории и подкатегории магазина.<br>
+     * <b>Принцип работы:</b><br>
+     * 1. Проверяем наличие сохранённого файла с уже структурированными товарами.<br>
+     * 2. Если файл существует, загружаем данные и приводим их к строго типизированной структуре.<br>
+     * 3. Если файла нет, создаём структуру с нуля:<br>
+     * &nbsp;&nbsp;&nbsp;a) Для каждой категории магазина создаём карту подкатегорий.<br>
+     * &nbsp;&nbsp;&nbsp;b) Для каждой подкатегории собираем массив товаров, принадлежащих ей.<br>
+     * &nbsp;&nbsp;&nbsp;c) Убираем пустые элементы массива и добавляем в карту подкатегорий.<br>
+     * 4. Сохраняем полученную структуру и выводим отладочную информацию.<br>
+     * В случае любой ошибки выводим стек ошибки.
+     */
     public void addingProductsToCategories() {
         File file = new File(saveSortedGoods.PATH_HASH_ARR);
-        if (file.isFile()) { // читаем сырые данные
-            List<HashMap> list = readList(saveSortedGoods.PATH_HASH_ARR, HashMap.class);
-            Map<?, ?> raw = list.get(0);
 
-            HashMap<Category, HashMap<SubCategory, Goods[]>> fixed =
-                    M.convertValue(raw, new TypeReference<HashMap<Category, HashMap<SubCategory, Goods[]>>>() {});
+        try {
+            if (file.isFile()) {
+                // Чтение существующих данных из файла
+                List<HashMap> list = readList(saveSortedGoods.PATH_HASH_ARR, HashMap.class);
+                Map<?, ?> raw = list.get(0);
 
-            setGoodList(fixed);
-            out("Загружено и приведено: " + getGoodList().keySet());
+                // Преобразование данных в строго типизированную структуру
+                HashMap<Category, HashMap<SubCategory, Goods[]>> fixed =
+                        M.convertValue(raw, new TypeReference<HashMap<Category, HashMap<SubCategory, Goods[]>>>() {});
 
-            return;
-        }
-        else {
-            getGoodList().clear();
-
-            for (Category cat : getShop().getCats()) {
-                HashMap<SubCategory, Goods[]> m = getGoodList().get(cat);
-                if (m == null) {
-                    m = new HashMap<>();
-                }
-
-                for (SubCategory sc : SubCategory.values()) {
-                    if (sc.getParent() == cat) {
-                        Goods[] gd = new Goods[getAllArrGoods().size()];
-                        int i = 0;
-                        for (int o = 0; o < getAllArrGoods().size(); o++) {
-                            if (getAllArrGoods().get(o).getSubCategories() == sc) {
-                                gd[i++] = getAllArrGoods().get(o);
-                            }
-                        }
-                        Goods[] gdClean = Arrays.copyOf(gd, i);
-                        m.put(sc, gdClean);
-                    }
-                }
-
-                HashMap<Category, HashMap<SubCategory, Goods[]>> wrapper = new HashMap<>();
-                getGoodList().put(cat, m);
+                setGoodList(fixed);
+                out("Загружено и приведено: " + getGoodList().keySet());
+                return;
             }
+            else {
+                // Если файла нет, строим структуру категорий с нуля
+                getGoodList().clear();
 
-            debugDump();
-            saveSortedGoods.saveList(getGoodList());
+                for (Category cat : getShop().getCats()) {
+                    HashMap<SubCategory, Goods[]> m = getGoodList().get(cat);
+                    if (m == null) {
+                        m = new HashMap<>();
+                    }
+
+                    // Разбиваем товары по подкатегориям
+                    for (SubCategory sc : SubCategory.values()) {
+                        if (sc.getParent() == cat) {
+                            Goods[] gd = new Goods[getAllArrGoods().size()];
+                            int i = 0;
+                            // Фильтрация товаров, принадлежащих подкатегории
+                            for (int o = 0; o < getAllArrGoods().size(); o++) {
+                                if (getAllArrGoods().get(o).getSubCategories() == sc) {
+                                    gd[i++] = getAllArrGoods().get(o);
+                                }
+                            }
+                            // Копируем массив до фактического количества товаров
+                            Goods[] gdClean = Arrays.copyOf(gd, i);
+                            m.put(sc, gdClean);
+                        }
+                    }
+                    getGoodList().put(cat, m);
+                }
+                // Сохраняем структуру и выводим отладочные данные
+                debugDump();
+                saveSortedGoods.saveList(getGoodList());
+            }
+        }
+        catch (Exception e) {
+            // Ловим любые ошибки при работе с файлом или построении структуры категорий
+            e.printStackTrace();
         }
     }
+
 
 
     public void selectedCategories(VBox root,
