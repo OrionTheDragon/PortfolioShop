@@ -15,7 +15,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
-import org.glassfish.jaxb.core.v2.TODO;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,7 +34,7 @@ import static Util.Util.*;
  */
 public class Shop {
 
-    // Картинки
+    /** .img категорий */
     private Image imageMeat;
     private Image imageMilk;
     private Image imageVegetables;
@@ -43,48 +42,48 @@ public class Shop {
     private Image imageGrocery;
     private Image imageDrinks;
 
-    //** Личный кабинет пользователя (инициализируется при входе в аккаунт) */
+    /** Личный кабинет пользователя (инициализируется при входе в аккаунт) */
     private PA pa;
 
-    //** Главная панель вкладок магазина. Хранится статически для доступа из других классов */
+    /** Главная панель вкладок магазина. Хранится статически для доступа из других классов */
     public static TabPane tabPane = new TabPane();
 
-    //** Вкладка «Магазин» с основным содержимым интерфейса покупок */
+    /** Вкладка «Магазин» с основным содержимым интерфейса покупок */
     private Tab shopTab = new Tab("Магазин");
 
-    //** Первая строка горизонтального контейнера (HBox) для категорий */
+    /** Первая строка горизонтального контейнера (HBox) для категорий */
     private HBox lineOne = new HBox(10);
-    //** Вторая строка горизонтального контейнера (HBox) для категорий */
+    /** Вторая строка горизонтального контейнера (HBox) для категорий */
     private HBox lineTwo = new HBox(10);
 
-    //** Основной вертикальный контейнер (VBox), содержащий всё содержимое магазина */
+    /** Основной вертикальный контейнер (VBox), содержащий всё содержимое магазина */
     private VBox rootShop = new VBox(10);
-    //** Обёртка VBox для визуальной настройки интерфейса */
+    /** Обёртка VBox для визуальной настройки интерфейса */
     private Parent ui = settingVBox(getRootShop());
 
-    //** Кнопка категории «Мясо» */
+    /** Кнопка категории «Мясо» */
     private Button meatButton = new Button();
-    //** Кнопка категории «Молоко и яйца» */
+    /** Кнопка категории «Молоко и яйца» */
     private Button milkButton = new Button();
-    //** Кнопка категории «Овощи и фрукты» */
+    /** Кнопка категории «Овощи и фрукты» */
     private Button vegetablesButton = new Button();
-    //** Кнопка категории «Хлеб и выпечка» */
+    /** Кнопка категории «Хлеб и выпечка» */
     private Button breadButton = new Button();
-    //** Кнопка категории «Бакалея» */
+    /** Кнопка категории «Бакалея» */
     private Button groceryButton = new Button();
-    //** Кнопка категории «Напитки» */
+    /** Кнопка категории «Напитки» */
     private Button drinksButton = new Button();
 
-    //** Массив категорий магазина, определённых в enum Category */
+    /** Массив категорий магазина, определённых в enum Category */
     private Category[] cats = Category.values();
 
-    //** Объект, управляющий товарами и их отображением */
+    /** Объект, управляющий товарами и их отображением */
     private Goods goods = new Goods();
 
-    //** Корзина пользователя для хранения выбранных товаров */
+    /** Корзина пользователя для хранения выбранных товаров */
     private Cart cart = new Cart();
 
-    //** Резервный список элементов интерфейса магазина (для восстановления после изменений) */
+    /** Резервный список элементов интерфейса магазина (для восстановления после изменений) */
     private static List<Node> backupNodesShop;
 
     public PA getPa() { return pa; }
@@ -339,7 +338,7 @@ public class Shop {
         }
     }
 
-    // TODO - Дописать данную функцию. Должна реализовывать покупку, после передавать логирование для записи истории
+    /** TODO - Дописать данную функцию. Должна реализовывать покупку, после передавать логирование для записи истории */
     public void placingAnOrder(VBox root, List<Goods> arrGoods, double allPrice, User u) {
         out("Shop/Categories/Goods.java: Вошли в placingAnOrder");
 
