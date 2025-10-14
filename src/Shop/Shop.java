@@ -43,42 +43,48 @@ public class Shop {
     private Image imageGrocery;
     private Image imageDrinks;
 
-    // Прочее
-    /** Личный кабинет пользователя (инициализируется при входе в аккаунт). */
+    //** Личный кабинет пользователя (инициализируется при входе в аккаунт) */
     private PA pa;
 
-    // ТабПанель
-    /** Главная панель вкладок магазина. Хранится статически для доступа из других классов. */
+    //** Главная панель вкладок магазина. Хранится статически для доступа из других классов */
     public static TabPane tabPane = new TabPane();
 
-    // Вкладки
-    /** Вкладка «Магазин» с основным содержимым интерфейса покупок. */
+    //** Вкладка «Магазин» с основным содержимым интерфейса покупок */
     private Tab shopTab = new Tab("Магазин");
 
-    // HBox
+    //** Первая строка горизонтального контейнера (HBox) для категорий */
     private HBox lineOne = new HBox(10);
+    //** Вторая строка горизонтального контейнера (HBox) для категорий */
     private HBox lineTwo = new HBox(10);
 
-    // VBox
+    //** Основной вертикальный контейнер (VBox), содержащий всё содержимое магазина */
     private VBox rootShop = new VBox(10);
-    // Обёртка vbox
+    //** Обёртка VBox для визуальной настройки интерфейса */
     private Parent ui = settingVBox(getRootShop());
 
-    // Кнопки
+    //** Кнопка категории «Мясо» */
     private Button meatButton = new Button();
+    //** Кнопка категории «Молоко и яйца» */
     private Button milkButton = new Button();
+    //** Кнопка категории «Овощи и фрукты» */
     private Button vegetablesButton = new Button();
+    //** Кнопка категории «Хлеб и выпечка» */
     private Button breadButton = new Button();
+    //** Кнопка категории «Бакалея» */
     private Button groceryButton = new Button();
+    //** Кнопка категории «Напитки» */
     private Button drinksButton = new Button();
 
-    // Категории
+    //** Массив категорий магазина, определённых в enum Category */
     private Category[] cats = Category.values();
 
+    //** Объект, управляющий товарами и их отображением */
     private Goods goods = new Goods();
 
+    //** Корзина пользователя для хранения выбранных товаров */
     private Cart cart = new Cart();
 
+    //** Резервный список элементов интерфейса магазина (для восстановления после изменений) */
     private static List<Node> backupNodesShop;
 
     public PA getPa() { return pa; }
