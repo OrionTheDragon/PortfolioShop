@@ -3,7 +3,7 @@ package Shop.Categories;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -25,10 +25,6 @@ import javafx.scene.layout.VBox;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 import static Ui.Main.getShop;
 import static Util.Util.*;
@@ -119,12 +115,6 @@ public class Goods {
         setType(type);
         setPrice(price);
         setQuantity(quantity);
-
-        String url = "jdbc:mysql://stardisk.xyz:3306:3306/u0324122_orionium";
-        String user = "u0324122_orionium";
-        String password = "zY9cR0tM1yhD9dS2";
-
-        addSQL();
     }
 
     @JsonProperty("SKU")
@@ -212,6 +202,16 @@ public class Goods {
     }
     public static void setBackupNodesGoods(List<Node> backupNodesGoods) {
         Goods.backupNodesGoods = backupNodesGoods;
+    }
+
+    public void startSQL() throws SQLException {
+        String url = "jdbc:mysql://stardisk.xyz:3306:3306/u0324122_orionium";
+        String user = "u0324122_orionium";
+        String password = "zY9cR0tM1yhD9dS2";
+
+        Connection conn = DriverManager.getConnection(url, user, password);
+
+        addSQL(conn);
     }
 
     public double pieceGoods(Goods goods, int steep) {
