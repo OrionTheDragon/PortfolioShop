@@ -234,8 +234,7 @@ public class Goods {
         return q;
     }
 
-    @Override
-    public void run() {
+    public void dowloadingProgress() {
 
     }
 
