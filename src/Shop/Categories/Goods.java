@@ -250,7 +250,6 @@ public class Goods {
     }
 
     public void downloadingProgress(VBox root) {
-        Timeline timeline = new Timeline();
 
         Label loadingProgress = new Label("0%");
         Label loadingBar = new Label("━");
@@ -259,6 +258,7 @@ public class Goods {
 
         Platform.runLater(() -> root.getChildren().setAll(loadingProgress, loadingBar));
 
+        Timeline timeline = new Timeline();
         int a = getAllArrGoods().size();
 
         timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
