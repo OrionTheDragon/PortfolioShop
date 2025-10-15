@@ -214,7 +214,7 @@ public class Goods {
 
     public void startSQL() throws SQLException {
         out("Shop/Categories/Goods.java: Запустили startSQL");
-        
+
         String url = "jdbc:mysql://stardisk.xyz:3306/u0324122_orionium";
         String user = "u0324122_orionium";
         String password = "zY9cR0tM1yhD9dS2";
@@ -235,6 +235,15 @@ public class Goods {
     }
 
     public void addingProductsToCategories() {
+        out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
+
+        try {
+            startSQL();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         File file = new File(saveSortedGoods.PATH_HASH_ARR);
         if (file.isFile()) { // читаем сырые данные
             List<HashMap> list = readList(saveSortedGoods.PATH_HASH_ARR, HashMap.class);
@@ -277,13 +286,6 @@ public class Goods {
 
             debugDump();
             saveSortedGoods.saveList(getGoodList());
-        }
-
-        try {
-            startSQL();
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
