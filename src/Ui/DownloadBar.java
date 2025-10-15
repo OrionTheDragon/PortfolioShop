@@ -42,8 +42,10 @@ public class DownloadBar {
 
             loadingProgress.setText(percent + "%");
 
-            if ((int) percent % 10 == 0) {
+            int tenPercent = (int) (percent / 10);
+            if (tenPercent > lastTenPercent[0]) {
                 loadingBar.setText(loadingBar.getText() + "━");
+                lastTenPercent[0] = tenPercent;
             }
 
             if (percent >= 100.0) {
