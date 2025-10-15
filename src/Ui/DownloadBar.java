@@ -42,6 +42,7 @@ public class DownloadBar {
             double percent = ((double) getDownloadScale() / a) * 100;
             out("Shop/Categories/Goods.java: Процент загрузки : " + percent + "%");
 
+            String percentText = String.format("%.1f%%", percent);
             loadingProgress.setText(percent + "%");
 
             int tenPercent = (int) (percent / 10);
