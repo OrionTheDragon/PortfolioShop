@@ -699,38 +699,43 @@ public class Goods {
 
     public void addSQL(Connection connection) throws SQLException {
         out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
+        new Thread(() -> {
+            try {
+                String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) " +
+                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " +
+                        "ON DUPLICATE KEY UPDATE " +
+                        "productName = VALUES(productName), " +
+                        "manufacturer = VALUES(manufacturer), " +
+                        "country = VALUES(country), " +
+                        "categories = VALUES(categories), " +
+                        "subCategories = VALUES(subCategories), " +
+                        "type = VALUES(type), " +
+                        "price = VALUES(price), " +
+                        "quantity = VALUES(quantity)";
 
-        String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " +
-                "ON DUPLICATE KEY UPDATE " +
-                "productName = VALUES(productName), " +
-                "manufacturer = VALUES(manufacturer), " +
-                "country = VALUES(country), " +
-                "categories = VALUES(categories), " +
-                "subCategories = VALUES(subCategories), " +
-                "type = VALUES(type), " +
-                "price = VALUES(price), " +
-                "quantity = VALUES(quantity)";
+                try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                    for (Goods g : getAllArrGoods()) {
+                        ps.setString(1, g.getSKU());
+                        ps.setString(2, g.getProductName());
+                        ps.setString(3, g.getManufacturer());
+                        ps.setString(4, g.getCountry());
+                        ps.setString(5, g.getCategories().name());
+                        ps.setString(6, g.getSubCategories().name());
+                        ps.setString(7, g.getType());
+                        ps.setDouble(8, g.getPrice());
+                        ps.setInt(9, g.getQuantity());
 
-        try (PreparedStatement ps = connection.prepareStatement(sql)) {
-            for (Goods g : getAllArrGoods()) {
-                ps.setString(1, g.getSKU());
-                ps.setString(2, g.getProductName());
-                ps.setString(3, g.getManufacturer());
-                ps.setString(4, g.getCountry());
-                ps.setString(5, g.getCategories().name());
-                ps.setString(6, g.getSubCategories().name());
-                ps.setString(7, g.getType());
-                ps.setDouble(8, g.getPrice());
-                ps.setInt(9, g.getQuantity());
+                        ps.executeUpdate();
 
-                ps.executeUpdate();
-
-                setDownloadScale(getDownloadScale() + 1);
-                out("Shop/Categories/Goods.java: DownloadScale: " + getDownloadScale());
-                out("Shop/Categories/Goods.java: SQL: " + sql);
+                        // обновление прогресса в UI-потоке
+                        Platform.runLater(() -> setDownloadScale(getDownloadScale() + 1));
+                    }
+                }
             }
-        }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 
     @Override
