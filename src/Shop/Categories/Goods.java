@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import Data.Card;
 import Data.Cart;
 import Data.User;
 import Shop.Category;
@@ -25,6 +24,10 @@ import javafx.scene.layout.VBox;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import static Ui.Main.getShop;
 import static Util.Util.*;
