@@ -359,28 +359,25 @@ public class Main extends Application {
                         getRoot().getChildren().clear();
                         setShop(new Shop());
 
-//                        DownloadBar.downloadingProgress(root);
-//                        try {
-//                            getShop().getGoods().startSQL();
-//                        }
-//                        catch (SQLException ex) {
-//                            ex.printStackTrace();
-//                        }
+                        DownloadBar.downloadingProgress(root);
+                        try {
+                            getShop().getGoods().startSQL();
+                        }
+                        catch (SQLException ex) {
+                            ex.printStackTrace();
+                        }
 
-//                        Timeline waitTimeline = new Timeline();
-
-                        getShop().shop(getRoot(), getUser());
-
-//                        waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
-//                            if (DownloadBar.flagProgress) {
-//                                getRoot().getChildren().clear();
-//
-//
-//                                waitTimeline.stop();
-//                            }
-//                        }));
-//                        waitTimeline.setCycleCount(Timeline.INDEFINITE);
-//                        waitTimeline.play();
+                        Timeline waitTimeline = new Timeline();
+                        
+                        waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
+                            if (DownloadBar.flagProgress) {
+                                getRoot().getChildren().clear();
+                                getShop().shop(getRoot(), getUser());
+                                waitTimeline.stop();
+                            }
+                        }));
+                        waitTimeline.setCycleCount(Timeline.INDEFINITE);
+                        waitTimeline.play();
                     }
                     catch (Exception e) {
                         // Здесь ключевой момент — отлов исключений в процессе проверки и инициирования сессии.
