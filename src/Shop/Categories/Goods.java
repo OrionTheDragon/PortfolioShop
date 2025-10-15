@@ -234,6 +234,11 @@ public class Goods {
         return q;
     }
 
+    @Override
+    public void run() {
+
+    }
+
     public void addingProductsToCategories() {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
