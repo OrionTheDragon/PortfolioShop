@@ -13,6 +13,8 @@ import Shop.Category;
 import Shop.Shop;
 import com.fasterxml.jackson.annotation.*;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -25,6 +27,7 @@ import javafx.scene.layout.VBox;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import javafx.util.Duration;
 
 import static Ui.Main.getShop;
 import static Util.Util.*;
@@ -234,8 +237,16 @@ public class Goods {
         return q;
     }
 
-    public void dowloadingProgress() {
+    public void downloadingProgress() {
+        Timeline timeline = new Timeline();
 
+        timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
+
+        }));
+
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.setDelay(Duration.seconds(0));
+        timeline.play();
     }
 
     public void addingProductsToCategories() {
