@@ -3,6 +3,7 @@ package Ui;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -25,11 +26,12 @@ public class DownloadBar {
     }
 
     public static void downloadingProgress(VBox root) {
-
         Label loadingProgress = new Label("0%");
         Label loadingBar = new Label("━");
-        loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
-        loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
+        loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 34));
+        loadingBar.setAlignment(Pos.CENTER);
+        loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 34));
+        loadingProgress.setAlignment(Pos.CENTER);
 
         Platform.runLater(() -> root.getChildren().setAll(loadingProgress, loadingBar));
 
