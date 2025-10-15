@@ -249,8 +249,15 @@ public class Goods {
     public void downloadingProgress() {
         Timeline timeline = new Timeline();
 
-        timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
+        int a = getAllArrGoods().size();
 
+        timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
+            double percent = ((double) getDownloadScale() / a) * 100;
+            out("Shop/Categories/Goods.java: Процентаж закгрузки : " + percent + "%");
+
+            if (percent >= 100.0) {
+                timeline.stop();
+            }
         }));
 
         timeline.setCycleCount(Timeline.INDEFINITE);
