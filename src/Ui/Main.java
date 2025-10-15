@@ -372,12 +372,6 @@ public class Main extends Application {
 
                                 getShop().getGoods().addingProductsToCategories();
                                 getShop().shop(getRoot(), getUser());
-                                try {
-                                    stop();
-                                }
-                                catch (Exception ex) {
-                                    throw new RuntimeException(ex);
-                                }
                             }
                         }));
                         waitTimeline.setCycleCount(Timeline.INDEFINITE);
@@ -579,12 +573,6 @@ public class Main extends Application {
 
                             getShop().getGoods().addingProductsToCategories();
                             getShop().shop(getRoot(), getUser());
-                            try {
-                                stop();
-                            }
-                            catch (Exception ex) {
-                                throw new RuntimeException(ex);
-                            }
                         }
                     }));
                     waitTimeline.setCycleCount(Timeline.INDEFINITE);
