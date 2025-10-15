@@ -113,7 +113,7 @@ public class Goods {
                  SubCategory subCategories,
                  String type,
                  double price,
-                 int quantity) throws SQLException {
+                 int quantity) {
         setSKU(SKU);
         setProductName(productName);
         setManufacturer(manufacturer);
@@ -123,8 +123,6 @@ public class Goods {
         setType(type);
         setPrice(price);
         setQuantity(quantity);
-
-        startSQL();
     }
 
     @JsonProperty("SKU")
