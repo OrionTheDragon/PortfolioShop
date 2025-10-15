@@ -3,6 +3,7 @@ package Shop.Categories;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.sql.Statement;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -639,7 +640,9 @@ public class Goods {
 
             out("Shop/Categories/Goods.java: SQL: " + sql);
 
-            
+            try (Statement st = conn.createStatement()) {
+                st.executeUpdate(sql);
+            }
         }
 
     }
