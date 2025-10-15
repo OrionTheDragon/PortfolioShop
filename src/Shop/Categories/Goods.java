@@ -647,6 +647,7 @@ public class Goods {
 
     public void addSQL(Connection connection) throws SQLException {
         out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
+
         String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " +
                 "ON DUPLICATE KEY UPDATE " +
@@ -670,6 +671,8 @@ public class Goods {
                 ps.setString(7, g.getType());
                 ps.setDouble(8, g.getPrice());
                 ps.setInt(9, g.getQuantity());
+
+                out("");
 
                 ps.executeUpdate();
             }
