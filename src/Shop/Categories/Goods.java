@@ -79,7 +79,7 @@ public class Goods {
     private static List<Node> backupNodesGoods;
 
     @JsonIgnore
-    private int dowlo
+    private int downloadScale;
 
     static {
         File file = new File(GOODS_PATH);
@@ -216,6 +216,12 @@ public class Goods {
     }
     public static void setBackupNodesGoods(List<Node> backupNodesGoods) {
         Goods.backupNodesGoods = backupNodesGoods;
+    }
+    public int getDownloadScale() {
+        return downloadScale;
+    }
+    public void setDownloadScale(int downloadScale) {
+        this.downloadScale = downloadScale;
     }
 
     public void startSQL() throws SQLException {
