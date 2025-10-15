@@ -43,7 +43,7 @@ public class DownloadBar {
             out("Shop/Categories/Goods.java: Процент загрузки : " + percent + "%");
 
             String percentText = String.format("%.1f%%", percent);
-            loadingProgress.setText(percent + "%");
+            loadingProgress.setText(percentText);
 
             int tenPercent = (int) (percent / 10);
             if (tenPercent > lastTenPercent[0]) {
