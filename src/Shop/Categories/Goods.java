@@ -647,22 +647,31 @@ public class Goods {
 
     public void addSQL(Connection connection) throws SQLException {
         out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
-        for (Goods g : getAllArrGoods()) {
-            String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (" +
-                    g.getSKU() + ", " +
-                    g.getProductName()+ ", " +
-                    g.getManufacturer() + ", " +
-                    g.getCountry() + ", " +
-                    g.getCategories() + ", " +
-                    g.getSubCategories() + ", " +
-                    g.getType() + ", " +
-                    g.getPrice() + ", " +
-                    g.getQuantity() + ")";
+        String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " +
+                "ON DUPLICATE KEY UPDATE " +
+                "productName = VALUES(productName), " +
+                "manufacturer = VALUES(manufacturer), " +
+                "country = VALUES(country), " +
+                "categories = VALUES(categories), " +
+                "subCategories = VALUES(subCategories), " +
+                "type = VALUES(type), " +
+                "price = VALUES(price), " +
+                "quantity = VALUES(quantity)";
 
-            out("Shop/Categories/Goods.java: SQL: " + sql);
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            for (Goods g : getAllArrGoods()) {
+                ps.setString(1, g.getSKU());
+                ps.setString(2, g.getProductName());
+                ps.setString(3, g.getManufacturer());
+                ps.setString(4, g.getCountry());
+                ps.setString(5, String.valueOf(g.getCategories()));
+                ps.setString(6, g.getSubCategories());
+                ps.setString(7, g.getType());
+                ps.setDouble(8, g.getPrice());
+                ps.setInt(9, g.getQuantity());
 
-            try (Statement st = connection.createStatement()) {
-                st.executeUpdate(sql);
+                ps.executeUpdate();
             }
         }
     }
