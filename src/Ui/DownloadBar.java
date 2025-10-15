@@ -1,6 +1,5 @@
 package Ui;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
@@ -14,16 +13,16 @@ import static Shop.Categories.Goods.getAllArrGoods;
 import static Util.Util.out;
 
 public class DownloadBar {
-    private int downloadScale;
+    private static int downloadScale;
 
-    public int getDownloadScale() {
+    public static int getDownloadScale() {
         return downloadScale;
     }
-    public void setDownloadScale(int downloadScale) {
-        this.downloadScale = downloadScale;
+    public static void setDownloadScale(int downloadScale) {
+        DownloadBar.downloadScale = downloadScale;
     }
 
-    public void downloadingProgress(VBox root) {
+    public static void downloadingProgress(VBox root) {
 
         Label loadingProgress = new Label("0%");
         Label loadingBar = new Label("━");

@@ -352,6 +352,10 @@ public class Main extends Application {
                         }
 
                         getRoot().getChildren().clear();
+
+                        DownloadBar.downloadingProgress(root);
+                        getRoot().getChildren().clear();
+
                         setShop(new Shop());
                         getShop().getGoods().addingProductsToCategories();
                         getShop().shop(getRoot(), found);
@@ -536,6 +540,10 @@ public class Main extends Application {
 
                     out("Ui/Main.java: Закончили процесс сохранения: " + getUser().toString());
                     clearRoot(getRoot());
+
+                    DownloadBar.downloadingProgress(root);
+                    getRoot().getChildren().clear();
+                    
                     setShop(new Shop());
                     getShop().getGoods().addingProductsToCategories();
                     getShop().shop(getRoot(), getUser());

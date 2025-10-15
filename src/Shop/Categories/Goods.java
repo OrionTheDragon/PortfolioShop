@@ -11,10 +11,9 @@ import Data.Cart;
 import Data.User;
 import Shop.Category;
 import Shop.Shop;
+import Ui.DownloadBar;
 import com.fasterxml.jackson.annotation.*;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
@@ -28,9 +27,6 @@ import javafx.scene.layout.VBox;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.util.Duration;
 
 import static Ui.Main.getShop;
 import static Util.Util.*;
@@ -684,7 +680,7 @@ public class Goods {
                         ps.executeUpdate();
 
                         // обновление прогресса в UI-потоке
-                        Platform.runLater(() -> setDownloadScale(getDownloadScale() + 1));
+                        Platform.runLater(() -> DownloadBar.setDownloadScale(DownloadBar.getDownloadScale() + 1));
                     }
                 }
             }
