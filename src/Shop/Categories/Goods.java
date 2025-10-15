@@ -81,8 +81,7 @@ public class Goods {
     @JsonIgnore
     private static List<Node> backupNodesGoods;
 
-    @JsonIgnore
-    private int downloadScale;
+
 
     static {
         File file = new File(GOODS_PATH);
@@ -220,12 +219,6 @@ public class Goods {
     public static void setBackupNodesGoods(List<Node> backupNodesGoods) {
         Goods.backupNodesGoods = backupNodesGoods;
     }
-    public int getDownloadScale() {
-        return downloadScale;
-    }
-    public void setDownloadScale(int downloadScale) {
-        this.downloadScale = downloadScale;
-    }
 
     public void startSQL() throws SQLException {
         out("Shop/Categories/Goods.java: Запустили startSQL");
@@ -249,47 +242,10 @@ public class Goods {
         return q;
     }
 
-    public void downloadingProgress(VBox root) {
-
-        Label loadingProgress = new Label("0%");
-        Label loadingBar = new Label("━");
-        loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
-        loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
-
-        Platform.runLater(() -> root.getChildren().setAll(loadingProgress, loadingBar));
-
-        Timeline timeline = new Timeline();
-        int a = getAllArrGoods().size();
-
-        timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
-            double percent = ((double) getDownloadScale() / a) * 100;
-            out("Shop/Categories/Goods.java: Процентаж закгрузки : " + percent + "%");
-
-            loadingProgress.setText(percent + "%");
-
-            if ((int) percent % 10 == 0) {
-                loadingBar.setText(loadingBar.getText() + "━");
-            }
-
-            if (percent >= 100.0) {
-                timeline.stop();
-            }
-        }));
-
-        timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.setDelay(Duration.seconds(0));
-        timeline.play();
-    }
-
-    public void addingProductsToCategories(VBox root) {
+    public void addingProductsToCategories() {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
-        root.getChildren().clear();
-        downloadingProgress(root);
-
         try {
-            root.getChildren().clear();
-            downloadingProgress(root);
             startSQL();
         }
         catch (SQLException e) {
