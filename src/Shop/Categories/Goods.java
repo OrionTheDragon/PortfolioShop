@@ -276,8 +276,6 @@ public class Goods {
             }
         }));
 
-        root.getChildren().setAll(loadingProgress, loadingBar);
-
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.setDelay(Duration.seconds(0));
         timeline.play();
