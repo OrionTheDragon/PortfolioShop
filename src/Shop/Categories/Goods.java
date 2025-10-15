@@ -123,13 +123,6 @@ public class Goods {
         setType(type);
         setPrice(price);
         setQuantity(quantity);
-
-        try {
-            startSQL();
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     @JsonProperty("SKU")
@@ -282,6 +275,13 @@ public class Goods {
 
             debugDump();
             saveSortedGoods.saveList(getGoodList());
+        }
+
+        try {
+            startSQL();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -672,7 +672,7 @@ public class Goods {
                 ps.setDouble(8, g.getPrice());
                 ps.setInt(9, g.getQuantity());
 
-                out("");
+                out("Shop/Categories/Goods.java: SQL: " + sql);
 
                 ps.executeUpdate();
             }
