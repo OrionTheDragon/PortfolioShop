@@ -691,9 +691,9 @@ public class Goods {
                 ps.setDouble(8, g.getPrice());
                 ps.setInt(9, g.getQuantity());
 
-                out("Shop/Categories/Goods.java: SQL: " + sql);
-
                 ps.executeUpdate();
+
+                out("Shop/Categories/Goods.java: SQL: " + sql);
             }
         }
     }
