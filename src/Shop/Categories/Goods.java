@@ -624,7 +624,7 @@ public class Goods {
     }
 
     public void addSQL() {
-        String sql = "INSERT INTO Goods ()";
+        String sql = "INSERT INTO Goods (SKU, )";
     }
 
     @Override
