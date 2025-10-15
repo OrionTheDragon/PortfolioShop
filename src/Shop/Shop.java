@@ -261,7 +261,7 @@ public class Shop {
             getPa().mainMenu();
 
             getGoods().showGoods();
-            getGoods().addingProductsToCategories();
+            getGoods().addingProductsToCategories(root);
         }
         catch (Exception e) {
             /*

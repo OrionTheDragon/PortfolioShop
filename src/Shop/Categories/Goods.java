@@ -265,11 +265,13 @@ public class Goods {
         timeline.play();
     }
 
-    public void addingProductsToCategories() {
+    public void addingProductsToCategories(VBox root) {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
         try {
             startSQL();
+
+            
         }
         catch (SQLException e) {
             e.printStackTrace();
@@ -353,7 +355,7 @@ public class Goods {
                 SubCategory sc = (SubCategory) btn.getUserData();
 
                 if (getGoodList().isEmpty()) {
-                    addingProductsToCategories();
+                    addingProductsToCategories(root);
                 }
 
                 var bySub = getGoodList().get(category);
