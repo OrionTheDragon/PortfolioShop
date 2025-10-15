@@ -672,8 +672,7 @@ public class Goods {
 
                         ps.executeUpdate();
 
-                        // обновление прогресса в UI-потоке
-                        Platform.runLater(() -> DownloadBar.setDownloadScale(DownloadBar.getDownloadScale() + 1));
+                        DownloadBar.setDownloadScale(DownloadBar.getDownloadScale() + 1);
                     }
                 }
             }

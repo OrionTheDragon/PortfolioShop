@@ -33,19 +33,19 @@ public class DownloadBar {
         loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 34));
         loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 34));
 
-        Platform.runLater(() -> root.getChildren().setAll(loadingProgress, loadingBar));
-
         Timeline timeline = new Timeline();
         int a = getAllArrGoods().size();
 
         final int[] lastTenPercent = {0};
 
-        timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
+        timeline.getKeyFrames().setAll(new KeyFrame(Duration.millis(50), event -> {
             double percent = ((double) getDownloadScale() / a) * 100;
             out("Shop/Categories/Goods.java: Процент загрузки : " + percent + "%");
 
             String percentText = String.format("%.1f%%", percent);
             loadingProgress.setText(percentText);
+
+            root.getChildren().setAll(loadingProgress, loadingBar);
 
             int tenPercent = (int) (percent / 10);
             if (tenPercent > lastTenPercent[0]) {
