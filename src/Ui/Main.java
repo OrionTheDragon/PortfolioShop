@@ -365,10 +365,17 @@ public class Main extends Application {
                         catch (SQLException ex) {
                             ex.printStackTrace();
                         }
-                        getRoot().getChildren().clear();
 
-                        getShop().getGoods().addingProductsToCategories();
-                        getShop().shop(getRoot(), found);
+                        Timeline waitTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), _ -> {
+                            if (DownloadBar.flagProgress) {
+                                getRoot().getChildren().clear();
+
+                                getShop().getGoods().addingProductsToCategories();
+                                getShop().shop(getRoot(), getUser());
+                            }
+                        }));
+                        waitTimeline.setCycleCount(Timeline.INDEFINITE);
+                        waitTimeline.play();
                     }
                     catch (Exception e) {
                         // Здесь ключевой момент — отлов исключений в процессе проверки и инициирования сессии.
