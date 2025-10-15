@@ -246,14 +246,18 @@ public class Goods {
         return q;
     }
 
-    public void downloadingProgress() {
+    public void downloadingProgress(VBox root) {
         Timeline timeline = new Timeline();
+
+        Label
 
         int a = getAllArrGoods().size();
 
         timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
             double percent = ((double) getDownloadScale() / a) * 100;
             out("Shop/Categories/Goods.java: Процентаж закгрузки : " + percent + "%");
+
+
 
             if (percent >= 100.0) {
                 timeline.stop();
@@ -271,7 +275,7 @@ public class Goods {
         try {
             startSQL();
 
-            
+
         }
         catch (SQLException e) {
             e.printStackTrace();
