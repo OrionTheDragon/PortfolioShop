@@ -119,6 +119,8 @@ public class Goods {
         setType(type);
         setPrice(price);
         setQuantity(quantity);
+
+        addSQL();
     }
 
     @JsonProperty("SKU")
