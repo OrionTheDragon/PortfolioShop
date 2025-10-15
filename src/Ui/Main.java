@@ -355,29 +355,7 @@ public class Main extends Application {
                             return;
                         }
                         setUser(found);
-
-                        getRoot().getChildren().clear();
-                        setShop(new Shop());
-
-                        DownloadBar.downloadingProgress(root);
-                        try {
-                            getShop().getGoods().startSQL();
-                        }
-                        catch (SQLException ex) {
-                            ex.printStackTrace();
-                        }
-
-                        Timeline waitTimeline = new Timeline();
-
-                        waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
-                            if (DownloadBar.flagProgress) {
-                                getRoot().getChildren().clear();
-                                getShop().shop(getRoot(), getUser());
-                                waitTimeline.stop();
-                            }
-                        }));
-                        waitTimeline.setCycleCount(Timeline.INDEFINITE);
-                        waitTimeline.play();
+                        startingShop();
                     }
                     catch (Exception e) {
                         // Здесь ключевой момент — отлов исключений в процессе проверки и инициирования сессии.
@@ -558,30 +536,8 @@ public class Main extends Application {
                     }
 
                     out("Ui/Main.java: Закончили процесс сохранения: " + getUser().toString());
-                    clearRoot(getRoot());
-                    setShop(new Shop());
 
-                    DownloadBar.downloadingProgress(root);
-                    try {
-                        getShop().getGoods().startSQL();
-                    }
-                    catch (SQLException ex) {
-                        ex.printStackTrace();
-                    }
-
-                    Timeline waitTimeline = new Timeline();
-
-                    waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
-                        if (DownloadBar.flagProgress) {
-                            getRoot().getChildren().clear();
-
-                            getShop().getGoods().addingProductsToCategories();
-                            getShop().shop(getRoot(), getUser());
-                            waitTimeline.stop();
-                        }
-                    }));
-                    waitTimeline.setCycleCount(Timeline.INDEFINITE);
-                    waitTimeline.play();
+                    startingShop();
                 }
                 catch (Exception ex) {
                     // Лог и пользовательское сообщение при общей ошибке сохранения.
@@ -601,7 +557,6 @@ public class Main extends Application {
                     errMess(getRoot(), "Не удалось вернуться: " + ex.getMessage());
                 }
             });
-
 //            debugBordersFull(getTextName());
 //            debugBordersFull(getTextPass());
 //            debugBordersFull(getTextCash());
@@ -612,6 +567,33 @@ public class Main extends Application {
         }
     }
     // <------- Конец блока входа в аккаунт
+
+    public void startingShop() {
+        clearRoot(getRoot());
+        setShop(new Shop());
+
+        DownloadBar.downloadingProgress(getRoot());
+        try {
+            getShop().getGoods().startSQL();
+        }
+        catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        Timeline waitTimeline = new Timeline();
+
+        waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
+            if (DownloadBar.flagProgress) {
+                getRoot().getChildren().clear();
+
+                getShop().getGoods().addingProductsToCategories();
+                getShop().shop(getRoot(), getUser());
+                waitTimeline.stop();
+            }
+        }));
+        waitTimeline.setCycleCount(Timeline.INDEFINITE);
+        waitTimeline.play();
+    }
 
     // Блок инициализации действий кнопки выйти. ------->
     /**
