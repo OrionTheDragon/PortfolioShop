@@ -628,7 +628,7 @@ public class Goods {
 
         for (Goods g : getAllArrGoods()) {
 
-            
+            sql = sql.replace();
 
         }
 
