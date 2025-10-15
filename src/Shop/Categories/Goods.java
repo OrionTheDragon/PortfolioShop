@@ -120,7 +120,11 @@ public class Goods {
         setPrice(price);
         setQuantity(quantity);
 
-        addSQL(dataSource.getConnection());
+        String url = "jdbc:mysql://stardisk.xyz:3306:3306/u0324122_orionium";
+        String user = "u0324122_orionium";
+        String password = "zY9cR0tM1yhD9dS2";
+
+        addSQL();
     }
 
     @JsonProperty("SKU")
