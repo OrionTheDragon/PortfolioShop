@@ -368,7 +368,7 @@ public class Main extends Application {
                         }
 
                         Timeline waitTimeline = new Timeline();
-                        
+
                         waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
                             if (DownloadBar.flagProgress) {
                                 getRoot().getChildren().clear();

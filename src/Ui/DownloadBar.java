@@ -38,7 +38,7 @@ public class DownloadBar {
 
         timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
             double percent = ((double) getDownloadScale() / a) * 100;
-            out("Shop/Categories/Goods.java: Процентаж закгрузки : " + percent + "%");
+            out("Shop/Categories/Goods.java: Процент загрузки : " + percent + "%");
 
             loadingProgress.setText(percent + "%");
 
