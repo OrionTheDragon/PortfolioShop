@@ -283,6 +283,8 @@ public class Goods {
     public void addingProductsToCategories(VBox root) {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
+        clearRoot(root);
+
         try {
             startSQL();
 
@@ -291,8 +293,6 @@ public class Goods {
         catch (SQLException e) {
             e.printStackTrace();
         }
-
-        clearRoot(root);
 
         File file = new File(saveSortedGoods.PATH_HASH_ARR);
         if (file.isFile()) { // читаем сырые данные
