@@ -268,12 +268,12 @@ public class Goods {
                 loadingBar.setText(loadingBar.getText() + "━");
             }
 
-            root.getChildren().setAll(loadingProgress, loadingBar);
-
             if (percent >= 100.0) {
                 timeline.stop();
             }
         }));
+
+        root.getChildren().setAll(loadingProgress, loadingBar);
 
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.setDelay(Duration.seconds(0));
