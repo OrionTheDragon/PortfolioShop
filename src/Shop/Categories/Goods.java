@@ -27,6 +27,8 @@ import javafx.scene.layout.VBox;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 
 import static Ui.Main.getShop;
@@ -249,7 +251,10 @@ public class Goods {
     public void downloadingProgress(VBox root) {
         Timeline timeline = new Timeline();
 
+        Label loadingProgress = new Label("0%");
         Label loadingBar = new Label();
+        loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
+        loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
 
         int a = getAllArrGoods().size();
 
@@ -257,7 +262,13 @@ public class Goods {
             double percent = ((double) getDownloadScale() / a) * 100;
             out("Shop/Categories/Goods.java: Процентаж закгрузки : " + percent + "%");
 
-            
+            loadingProgress.setText(percent + "%");
+
+            if ((int) percent % 10 == 0) {
+                loadingBar.setText(loadingBar.getText() + "━");
+            }
+
+            root.getChildren().setAll(loadingProgress, loadingBar);
 
             if (percent >= 100.0) {
                 timeline.stop();
@@ -275,11 +286,13 @@ public class Goods {
         try {
             startSQL();
 
-
+            downloadingProgress(root);
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
+
+        clearRoot(root);
 
         File file = new File(saveSortedGoods.PATH_HASH_ARR);
         if (file.isFile()) { // читаем сырые данные
@@ -715,6 +728,8 @@ public class Goods {
 
                 ps.executeUpdate();
 
+                setDownloadScale(getDownloadScale() + 1);
+                out("Shop/Categories/Goods.java: DownloadScale: " + getDownloadScale());
                 out("Shop/Categories/Goods.java: SQL: " + sql);
             }
         }
