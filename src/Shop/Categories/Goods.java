@@ -624,7 +624,7 @@ public class Goods {
         }
     }
 
-    public void addSQL(Connection connection)  {
+    public void addSQL(Connection connection) throws SQLException {
         out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
         for (Goods g : getAllArrGoods()) {
             String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (" +
@@ -644,7 +644,6 @@ public class Goods {
                 st.executeUpdate(sql);
             }
         }
-
     }
 
     @Override
