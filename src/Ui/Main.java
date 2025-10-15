@@ -367,8 +367,7 @@ public class Main extends Application {
 //                        }
 
 //                        Timeline waitTimeline = new Timeline();
-
-                        getShop().getGoods().addingProductsToCategories();
+                        
                         getShop().shop(getRoot(), getUser());
 
 //                        waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {

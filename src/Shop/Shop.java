@@ -260,6 +260,7 @@ public class Shop {
             createPA(user);
             getPa().mainMenu();
 
+            getGoods().addingProductsToCategories();
             getGoods().showGoods();
         }
         catch (Exception e) {
