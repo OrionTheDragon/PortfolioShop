@@ -249,7 +249,7 @@ public class Goods {
     public void downloadingProgress(VBox root) {
         Timeline timeline = new Timeline();
 
-        Label
+        Label loadingBar = new Label();
 
         int a = getAllArrGoods().size();
 
@@ -257,7 +257,7 @@ public class Goods {
             double percent = ((double) getDownloadScale() / a) * 100;
             out("Shop/Categories/Goods.java: Процентаж закгрузки : " + percent + "%");
 
-
+            
 
             if (percent >= 100.0) {
                 timeline.stop();
