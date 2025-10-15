@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -255,6 +256,8 @@ public class Goods {
         Label loadingBar = new Label("━");
         loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
         loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
+
+        Platform.runLater(() -> root.getChildren().setAll(loadingProgress, loadingBar));
 
         int a = getAllArrGoods().size();
 
