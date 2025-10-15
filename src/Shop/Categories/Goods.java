@@ -628,8 +628,15 @@ public class Goods {
 
         for (Goods g : getAllArrGoods()) {
 
-            sql = sql.replace();
-
+            sql = sql.replace("\\?", g.getSKU());
+            sql = sql.replace("\\?", g.getProductName());
+            sql = sql.replace("\\?", g.getManufacturer());
+            sql = sql.replace("\\?", g.);
+            sql = sql.replace("\\?", );
+            sql = sql.replace("\\?", );
+            sql = sql.replace("\\?", );
+            sql = sql.replace("\\?", );
+            sql = sql.replace("\\?", );
         }
 
     }
