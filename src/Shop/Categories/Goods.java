@@ -636,6 +636,10 @@ public class Goods {
                     g.getType() + ", " +
                     g.getPrice() + ", " +
                     g.getQuantity() + ")";
+
+            out("Shop/Categories/Goods.java: SQL: " + sql);
+
+            
         }
 
     }
