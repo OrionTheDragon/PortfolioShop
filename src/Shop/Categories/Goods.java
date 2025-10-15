@@ -626,7 +626,16 @@ public class Goods {
     public void addSQL() {
         out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
         for (Goods g : getAllArrGoods()) {
-            String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (", ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (" +
+                    g.getSKU() + ", " +
+                    g.getProductName()+ ", " +
+                    g.getManufacturer() + ", " +
+                    g.getCountry() + ", " +
+                    g.getCategories() + ", " +
+                    g.getSubCategories() + ", " +
+                    g.getType() + ", " +
+                    g.getPrice() + ", " +
+                    g.getQuantity() + ")";
         }
 
     }
