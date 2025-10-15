@@ -241,13 +241,6 @@ public class Goods {
     public void addingProductsToCategories() {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
-        try {
-            startSQL();
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
-        }
-
         File file = new File(saveSortedGoods.PATH_HASH_ARR);
         if (file.isFile()) { // читаем сырые данные
             List<HashMap> list = readList(saveSortedGoods.PATH_HASH_ARR, HashMap.class);

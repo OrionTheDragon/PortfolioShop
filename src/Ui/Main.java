@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -352,11 +353,17 @@ public class Main extends Application {
                         }
 
                         getRoot().getChildren().clear();
+                        setShop(new Shop());
 
                         DownloadBar.downloadingProgress(root);
+                        try {
+                            getShop().getGoods().startSQL();
+                        }
+                        catch (SQLException ex) {
+                            ex.printStackTrace();
+                        }
                         getRoot().getChildren().clear();
 
-                        setShop(new Shop());
                         getShop().getGoods().addingProductsToCategories();
                         getShop().shop(getRoot(), found);
                     }
@@ -540,11 +547,17 @@ public class Main extends Application {
 
                     out("Ui/Main.java: Закончили процесс сохранения: " + getUser().toString());
                     clearRoot(getRoot());
+                    setShop(new Shop());
 
                     DownloadBar.downloadingProgress(root);
+                    try {
+                        getShop().getGoods().startSQL();
+                    }
+                    catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
                     getRoot().getChildren().clear();
-                    
-                    setShop(new Shop());
+
                     getShop().getGoods().addingProductsToCategories();
                     getShop().shop(getRoot(), getUser());
                 }
