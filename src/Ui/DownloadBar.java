@@ -15,6 +15,8 @@ import static Util.Util.out;
 public class DownloadBar {
     private static int downloadScale;
 
+    public static boolean flagProgress = false;
+
     public static int getDownloadScale() {
         return downloadScale;
     }

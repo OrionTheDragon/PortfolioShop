@@ -552,8 +552,6 @@ public class Main extends Application {
                     clearRoot(getRoot());
                     setShop(new Shop());
 
-                    boolean flag = false;
-
                     DownloadBar.downloadingProgress(root);
                     try {
                         getShop().getGoods().startSQL();
@@ -563,7 +561,7 @@ public class Main extends Application {
                     }
 
                     Timeline waitTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), _ -> {
-                        if (flag) {
+                        if (DownloadBar.flagProgress) {
                             getRoot().getChildren().clear();
 
                             getShop().getGoods().addingProductsToCategories();

@@ -680,6 +680,7 @@ public class Goods {
             catch (SQLException e) {
                 e.printStackTrace();
             }
+            DownloadBar.flagProgress = true;
         }).start();
     }
 
