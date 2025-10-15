@@ -353,6 +353,7 @@ public class Main extends Application {
 
                         getRoot().getChildren().clear();
                         setShop(new Shop());
+                        getShop().getGoods().addingProductsToCategories(getRoot());
                         getShop().shop(getRoot(), found);
                     }
                     catch (Exception e) {
@@ -536,6 +537,7 @@ public class Main extends Application {
                     out("Ui/Main.java: Закончили процесс сохранения: " + getUser().toString());
                     clearRoot(getRoot());
                     setShop(new Shop());
+                    getShop().getGoods().addingProductsToCategories(getRoot());
                     getShop().shop(getRoot(), getUser());
                 }
                 catch (Exception ex) {

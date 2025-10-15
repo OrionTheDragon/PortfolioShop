@@ -252,7 +252,7 @@ public class Goods {
         Timeline timeline = new Timeline();
 
         Label loadingProgress = new Label("0%");
-        Label loadingBar = new Label();
+        Label loadingBar = new Label("━");
         loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
         loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 24));
 
