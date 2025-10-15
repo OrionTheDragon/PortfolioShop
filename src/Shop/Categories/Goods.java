@@ -623,6 +623,10 @@ public class Goods {
         }
     }
 
+    public void addSQL() {
+        String sql = "INSERT INTO Goods"
+    }
+
     @Override
     public String toString() {
         return "Goods { " +
