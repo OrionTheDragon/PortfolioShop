@@ -79,7 +79,7 @@ public class Goods {
     private static List<Node> backupNodesGoods;
 
     @JsonIgnore
-    private int 
+    private int dowlo
 
     static {
         File file = new File(GOODS_PATH);
