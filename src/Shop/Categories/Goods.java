@@ -123,6 +123,13 @@ public class Goods {
         setType(type);
         setPrice(price);
         setQuantity(quantity);
+
+        try {
+            startSQL();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @JsonProperty("SKU")
