@@ -626,17 +626,27 @@ public class Goods {
     public void addSQL() {
         String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
+        out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
         for (Goods g : getAllArrGoods()) {
-            
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", g.getSKU());
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", g.getProductName());
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", g.getManufacturer());
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", g.getCountry());
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", String.valueOf(g.getCategories()));
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", String.valueOf(g.getSubCategories()));
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", g.getType());
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", String.valueOf(g.getPrice()));
+            out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", String.valueOf(g.getQuantity()));
+            out("Shop/Categories/Goods.java: " + sql);
         }
 
     }
