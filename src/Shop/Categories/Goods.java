@@ -283,9 +283,8 @@ public class Goods {
     public void addingProductsToCategories(VBox root) {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
-        clearRoot(root);
-
         try {
+            root.getChildren().clear();
             downloadingProgress(root);
             startSQL();
         }
@@ -369,10 +368,6 @@ public class Goods {
 
             btn.setOnAction(_ -> {
                 SubCategory sc = (SubCategory) btn.getUserData();
-
-                if (getGoodList().isEmpty()) {
-                    addingProductsToCategories(root);
-                }
 
                 var bySub = getGoodList().get(category);
 
