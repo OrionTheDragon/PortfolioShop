@@ -624,10 +624,10 @@ public class Goods {
     }
 
     public void addSQL() {
-        String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
         out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
         for (Goods g : getAllArrGoods()) {
+            String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
             out("Shop/Categories/Goods.java: " + sql);
             sql = sql.replaceFirst("\\?", g.getSKU());
             out("Shop/Categories/Goods.java: " + sql);
