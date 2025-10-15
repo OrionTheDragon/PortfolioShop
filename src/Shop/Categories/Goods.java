@@ -627,16 +627,16 @@ public class Goods {
         String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         for (Goods g : getAllArrGoods()) {
-
-            sql = sql.replace("\\?", g.getSKU());
-            sql = sql.replace("\\?", g.getProductName());
-            sql = sql.replace("\\?", g.getManufacturer());
-            sql = sql.replace("\\?", g.);
-            sql = sql.replace("\\?", );
-            sql = sql.replace("\\?", );
-            sql = sql.replace("\\?", );
-            sql = sql.replace("\\?", );
-            sql = sql.replace("\\?", );
+            
+            sql = sql.replaceFirst("\\?", g.getSKU());
+            sql = sql.replaceFirst("\\?", g.getProductName());
+            sql = sql.replaceFirst("\\?", g.getManufacturer());
+            sql = sql.replaceFirst("\\?", g.getCountry());
+            sql = sql.replaceFirst("\\?", String.valueOf(g.getCategories()));
+            sql = sql.replaceFirst("\\?", String.valueOf(g.getSubCategories()));
+            sql = sql.replaceFirst("\\?", g.getType());
+            sql = sql.replaceFirst("\\?", String.valueOf(g.getPrice()));
+            sql = sql.replaceFirst("\\?", String.valueOf(g.getQuantity()));
         }
 
     }
