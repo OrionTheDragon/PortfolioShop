@@ -2,6 +2,8 @@ package Ui;
 
 import Shop.Shop;
 import Data.User;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
@@ -15,6 +17,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -549,6 +552,8 @@ public class Main extends Application {
                     clearRoot(getRoot());
                     setShop(new Shop());
 
+                    boolean flag = false;
+
                     DownloadBar.downloadingProgress(root);
                     try {
                         getShop().getGoods().startSQL();
@@ -556,10 +561,17 @@ public class Main extends Application {
                     catch (SQLException ex) {
                         ex.printStackTrace();
                     }
-                    getRoot().getChildren().clear();
 
-                    getShop().getGoods().addingProductsToCategories();
-                    getShop().shop(getRoot(), getUser());
+                    Timeline waitTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), _ -> {
+                        if (flag) {
+                            getRoot().getChildren().clear();
+
+                            getShop().getGoods().addingProductsToCategories();
+                            getShop().shop(getRoot(), getUser());
+                        }
+                    }));
+                    waitTimeline.setCycleCount(Timeline.INDEFINITE);
+                    waitTimeline.play();
                 }
                 catch (Exception ex) {
                     // Лог и пользовательское сообщение при общей ошибке сохранения.
