@@ -354,6 +354,7 @@ public class Main extends Application {
                             errMess(getRoot(), "Неверный логин или пароль");
                             return;
                         }
+                        setUser(found);
 
                         getRoot().getChildren().clear();
                         setShop(new Shop());
@@ -367,7 +368,7 @@ public class Main extends Application {
 //                        }
 
 //                        Timeline waitTimeline = new Timeline();
-                        
+
                         getShop().shop(getRoot(), getUser());
 
 //                        waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
