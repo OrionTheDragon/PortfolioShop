@@ -283,12 +283,9 @@ public class Goods {
     public void addingProductsToCategories(VBox root) {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
-        clearRoot(root);
-
         try {
-            startSQL();
-
             downloadingProgress(root);
+            startSQL();
         }
         catch (SQLException e) {
             e.printStackTrace();
