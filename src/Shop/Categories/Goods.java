@@ -624,7 +624,7 @@ public class Goods {
         }
     }
 
-    public void addSQL() {
+    public void addSQL(Connection connection)  {
         out("Shop/Categories/Goods.java: Выполняем SQL запросы...");
         for (Goods g : getAllArrGoods()) {
             String sql = "INSERT INTO Goods (SKU, productName, manufacturer, country, categories, subCategories, type, price, quantity) VALUES (" +
@@ -640,7 +640,7 @@ public class Goods {
 
             out("Shop/Categories/Goods.java: SQL: " + sql);
 
-            try (Statement st = conn.createStatement()) {
+            try (Statement st = connection.createStatement()) {
                 st.executeUpdate(sql);
             }
         }
