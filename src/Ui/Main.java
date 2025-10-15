@@ -366,12 +366,15 @@ public class Main extends Application {
                             ex.printStackTrace();
                         }
 
-                        Timeline waitTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), _ -> {
+                        Timeline waitTimeline = new Timeline();
+
+                        waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
                             if (DownloadBar.flagProgress) {
                                 getRoot().getChildren().clear();
 
                                 getShop().getGoods().addingProductsToCategories();
                                 getShop().shop(getRoot(), getUser());
+                                waitTimeline.stop();
                             }
                         }));
                         waitTimeline.setCycleCount(Timeline.INDEFINITE);
@@ -567,12 +570,15 @@ public class Main extends Application {
                         ex.printStackTrace();
                     }
 
-                    Timeline waitTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), _ -> {
+                    Timeline waitTimeline = new Timeline();
+
+                    waitTimeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), _ -> {
                         if (DownloadBar.flagProgress) {
                             getRoot().getChildren().clear();
 
                             getShop().getGoods().addingProductsToCategories();
                             getShop().shop(getRoot(), getUser());
+                            waitTimeline.stop();
                         }
                     }));
                     waitTimeline.setCycleCount(Timeline.INDEFINITE);
