@@ -120,7 +120,7 @@ public class Goods {
         setPrice(price);
         setQuantity(quantity);
 
-        addSQL();
+        addSQL(dataSource.getConnection());
     }
 
     @JsonProperty("SKU")
