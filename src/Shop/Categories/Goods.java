@@ -665,8 +665,8 @@ public class Goods {
                 ps.setString(2, g.getProductName());
                 ps.setString(3, g.getManufacturer());
                 ps.setString(4, g.getCountry());
-                ps.setString(5, String.valueOf(g.getCategories()));
-                ps.setString(6, g.getSubCategories());
+                ps.setString(5, g.getCategories().name());
+                ps.setString(6, g.getSubCategories().name());
                 ps.setString(7, g.getType());
                 ps.setDouble(8, g.getPrice());
                 ps.setInt(9, g.getQuantity());
