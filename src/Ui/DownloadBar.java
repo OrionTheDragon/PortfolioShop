@@ -26,12 +26,12 @@ public class DownloadBar {
     }
 
     public static void downloadingProgress(VBox root) {
+        root.setAlignment(Pos.CENTER);
+
         Label loadingProgress = new Label("0%");
         Label loadingBar = new Label("━");
         loadingBar.setFont(Font.font(String.valueOf(FontWeight.BOLD), 34));
-        loadingBar.setAlignment(Pos.CENTER);
         loadingProgress.setFont(Font.font(String.valueOf(FontWeight.BOLD), 34));
-        loadingProgress.setAlignment(Pos.CENTER);
 
         Platform.runLater(() -> root.getChildren().setAll(loadingProgress, loadingBar));
 
@@ -54,6 +54,7 @@ public class DownloadBar {
             }
 
             if (percent >= 100.0) {
+                root.setAlignment(Pos.TOP_CENTER);
                 timeline.stop();
             }
         }));
