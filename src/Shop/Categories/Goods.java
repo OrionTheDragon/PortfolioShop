@@ -105,7 +105,15 @@ public class Goods {
 
     public Goods() {/*out("Shop/Categories/Goods.java: Загрузили Goods");*/}
 
-    public Goods(String SKU, String productName, String manufacturer, String country, Category categories, SubCategory subCategories, String type, double price, int quantity) {
+    public Goods(String SKU,
+                 String productName,
+                 String manufacturer,
+                 String country,
+                 Category categories,
+                 SubCategory subCategories,
+                 String type,
+                 double price,
+                 int quantity) throws SQLException {
         setSKU(SKU);
         setProductName(productName);
         setManufacturer(manufacturer);
@@ -115,6 +123,8 @@ public class Goods {
         setType(type);
         setPrice(price);
         setQuantity(quantity);
+
+        startSQL();
     }
 
     @JsonProperty("SKU")
