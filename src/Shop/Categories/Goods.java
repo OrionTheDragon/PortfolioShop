@@ -283,6 +283,9 @@ public class Goods {
     public void addingProductsToCategories(VBox root) {
         out("Shop/Categories/Goods.java: Вошли в addingProductsToCategories");
 
+        root.getChildren().clear();
+        downloadingProgress(root);
+
         try {
             root.getChildren().clear();
             downloadingProgress(root);
