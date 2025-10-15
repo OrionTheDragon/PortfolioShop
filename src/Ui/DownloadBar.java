@@ -36,6 +36,8 @@ public class DownloadBar {
         Timeline timeline = new Timeline();
         int a = getAllArrGoods().size();
 
+        final int[] lastTenPercent = {0};
+
         timeline.getKeyFrames().setAll(new KeyFrame(Duration.seconds(0.5), event -> {
             double percent = ((double) getDownloadScale() / a) * 100;
             out("Shop/Categories/Goods.java: Процент загрузки : " + percent + "%");
