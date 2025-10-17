@@ -3,6 +3,7 @@ package Shop.Categories;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -218,8 +219,7 @@ public class Goods {
 
     public void startSQL() throws SQLException {
         out("Shop/Categories/Goods.java: Запустили startSQL");
-
-        
+        Path path = Paths.get("C:/Users/Ryzen/Desktop/data.txt"); // укажи свой путь
 
         Connection conn = DriverManager.getConnection(url, user, password);
 
