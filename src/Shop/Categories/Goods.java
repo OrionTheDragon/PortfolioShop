@@ -221,9 +221,7 @@ public class Goods {
         out("Shop/Categories/Goods.java: Запустили startSQL");
         Path path = Paths.get("C:/Users/Ryzen/Desktop/pass.txt");
 
-        Connection conn = DriverManager.getConnection(url, user, password);
 
-        addSQL(conn);
     }
 
     public double pieceGoods(Goods goods, int steep) {
