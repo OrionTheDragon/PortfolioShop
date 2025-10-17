@@ -219,7 +219,7 @@ public class Goods {
 
     public void startSQL() throws SQLException {
         out("Shop/Categories/Goods.java: Запустили startSQL");
-        Path path = Paths.get("C:/Users/Ryzen/Desktop/data.txt"); // укажи свой путь
+        Path path = Paths.get("C:/Users/Ryzen/Desktop/pass.txt");
 
         Connection conn = DriverManager.getConnection(url, user, password);
 
