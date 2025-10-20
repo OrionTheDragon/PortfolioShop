@@ -221,7 +221,7 @@ public class Goods {
     public void startSQL() throws SQLException {
         out("Shop/Categories/Goods.java: Запустили startSQL");
 
-        String url = "jdbc:mysql://stardisk.xyz:3306/u0324122_orionium";  // адрес БД
+        String url = "jdbc:mysql://stardisk.xyz:3306/u0324122_orionium";
         String user = "u0324122_orionium";
         String password = "zY9cR0tM1yhD9dS2";
 

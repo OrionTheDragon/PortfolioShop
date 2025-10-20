@@ -375,7 +375,7 @@ public class Shop {
         }
 
         for (Card c : cards) {
-
+            out(c.getUserID());
         }
 
         root.getChildren().addAll(makeLabel("Всего к оплате: " + allPrice + "₽"), DCHbox);

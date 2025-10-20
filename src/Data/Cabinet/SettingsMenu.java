@@ -28,6 +28,7 @@ public class SettingsMenu {
     private Button addCard = new Button("Привязать карту");
     /** Кнопка открытия экрана редактирования профиля (изменение имени, пароля, возраста и др.). */
     private Button changeData = new Button("Настроить профиль");
+    private 
 
     public Button getBack() {
         return back;
