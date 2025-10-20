@@ -222,13 +222,14 @@ public class Cart {
     public void primaryFields(User u) {
         clearRoot(getVBoxCart());
         loadCart(u);
-        Label cardB = new Label();
+        ArrayList<Label> cardB = new ArrayList<>();
 
+        int countCard = 0;
         for (Label l : u.getPa().getCardBalance()) {
-            cardB.setText(cardB.getText() + l.getText());
+            cardB.get(countCard).setText(cardB.get(countCard).getText() + l.getText());
+            editLabelPA(cardB.get(countCard));
+            countCard++;
         }
-
-        editLabelPA(cardB);
 
         Label separator = makeLabel("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
 
