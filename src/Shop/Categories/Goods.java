@@ -2,6 +2,7 @@ package Shop.Categories;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
@@ -219,9 +220,14 @@ public class Goods {
 
     public void startSQL() throws SQLException {
         out("Shop/Categories/Goods.java: Запустили startSQL");
-        Path path = Paths.get("C:/Users/Ryzen/Desktop/pass.txt");
 
+        String url = "jdbc:mysql://stardisk.xyz:3306/u0324122_orionium";  // адрес БД
+        String user = "u0324122_orionium";
+        String password = "zY9cR0tM1yhD9dS2";
 
+        Connection conn = DriverManager.getConnection(url, user, password);
+
+        addSQL(conn);
     }
 
     public double pieceGoods(Goods goods, int steep) {
