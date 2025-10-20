@@ -1,5 +1,6 @@
 package Util;
 
+import Data.Cabinet.SettingsMenu;
 import Data.Card;
 import Data.User;
 import javafx.animation.PauseTransition;
@@ -262,8 +263,7 @@ public class CreateCard {
             back.setOnAction(_ -> {
                 try {
                     out("Util/CreateCard.java: Возвращаемся в settingsMenu");
-                    user.getPa().rebuildCardsBox();
-                    user.getPa().getSettingsMenu().settingsMenu(root, tab, user.getPa());
+                    root.getChildren().setAll(SettingsMenu.getBackupNodeSettings());
                 }
                 catch (Exception e) {
                     out("Util/CreateCard.java: Ошибка при возврате: " + e.getMessage());

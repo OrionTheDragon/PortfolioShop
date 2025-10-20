@@ -28,7 +28,7 @@ public class SettingsMenu {
     private Button addCard = new Button("Привязать карту");
     /** Кнопка открытия экрана редактирования профиля (изменение имени, пароля, возраста и др.). */
     private Button changeData = new Button("Настроить профиль");
-    private 
+    private static List<Node> backupNodeSettings;
 
     public Button getBack() {
         return back;
@@ -48,6 +48,12 @@ public class SettingsMenu {
     public void setChangeData(Button changeData) {
         this.changeData = changeData;
     }
+    public static List<Node> getBackupNodeSettings() {
+        return backupNodeSettings;
+    }
+    public static void setBackupNodeSettings(List<Node> backupNodeSettings) {
+        SettingsMenu.backupNodeSettings = backupNodeSettings;
+    }
 
     /**
      * Рисует меню настроек: «Настроить профиль», «Привязать карту», «Назад».
@@ -61,7 +67,7 @@ public class SettingsMenu {
                              PA pa) {
 
         try {
-            List<Node> backupNodes = backupNode(root);
+            setBackupNodeSettings(backupNode(root));
 
             clearRoot(root);
 
@@ -85,7 +91,7 @@ public class SettingsMenu {
             getBack().setOnAction(_ -> {
                 try {
                     out("Data/Cabinet/SettingsMenu.java: Возвращаемся в mainMenu");
-                    root.getChildren().setAll(backupNodes);
+                    root.getChildren().setAll(getBackupNodeSettings());
                 }
                 catch (Exception e) {
                     out("Data/Cabinet/SettingsMenu.java: Ошибка возврата в mainMenu: " + e.getMessage());

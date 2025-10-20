@@ -79,8 +79,6 @@ public class Goods {
     @JsonIgnore
     private static List<Node> backupNodesGoods;
 
-
-
     static {
         File file = new File(GOODS_PATH);
 
