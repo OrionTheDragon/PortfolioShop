@@ -67,15 +67,13 @@ public class SettingsMenu {
                              PA pa) {
 
         try {
-            setBackupNodeSettings(backupNode(root));
-
             clearRoot(root);
 
             root.getChildren().addAll(getChangeData(),
                     getAddCard(),
                     getBack());
 
-            List<Node> backupNodesSettingsMenu = backupNode(root);
+            setBackupNodeSettings(backupNode(root));
 
             getAddCard().setOnAction(_ -> {
                 try {
@@ -91,7 +89,7 @@ public class SettingsMenu {
             getBack().setOnAction(_ -> {
                 try {
                     out("Data/Cabinet/SettingsMenu.java: Возвращаемся в mainMenu");
-                    root.getChildren().setAll(getBackupNodeSettings());
+                    root.getChildren().setAll(PA.getBackupNodesPA());
                 }
                 catch (Exception e) {
                     out("Data/Cabinet/SettingsMenu.java: Ошибка возврата в mainMenu: " + e.getMessage());
@@ -136,7 +134,7 @@ public class SettingsMenu {
 
                     back.setOnAction(__ -> {
                         try {
-                            root.getChildren().setAll(backupNodesSettingsMenu);
+                            root.getChildren().setAll(getBackupNodeSettings());
                         }
                         catch (Exception e) {
                             out("Data/Cabinet/SettingsMenu.java: Ошибка возврата из проверки пароля: " + e.getMessage());
