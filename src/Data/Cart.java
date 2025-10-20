@@ -226,7 +226,7 @@ public class Cart {
 
         int countCard = 0;
         for (Label l : u.getPa().getCardBalance()) {
-            cardB.get(countCard).setText(cardB.get(countCard).getText() + l.getText());
+            cardB.set(countCard, new Label(l.getText()));
             editLabelPA(cardB.get(countCard));
             countCard++;
         }
